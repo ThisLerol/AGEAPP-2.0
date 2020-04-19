@@ -30,7 +30,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             tabs: <Widget>
             [new Tab(icon: new Icon(Icons.home)),
              new Tab(icon: new Icon(Icons.music_note)),
-              new Tab(icon: new Icon(Icons.view_column)),
+              new Tab(icon: new Icon(Icons.library_books)),
               new Tab(icon: new Icon(Icons.add,size: 30)),
             ]
         ),
@@ -53,3 +53,6 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
   }
 
 }
+
+
+

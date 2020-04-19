@@ -47,7 +47,7 @@ class _SplashScrean extends State<SplashScrean>{
           fit: StackFit.expand,
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(color: Colors.redAccent),
+              decoration: BoxDecoration(color: Colors.white),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -73,7 +73,7 @@ class _SplashScrean extends State<SplashScrean>{
                           padding: EdgeInsets.only(top: 10.0),
 
                         ),
-                        Text("AGEAPP",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight: FontWeight.bold),)
+                        Text("AGEAPP",style: TextStyle(color: Colors.redAccent,fontSize: 24.0,fontWeight: FontWeight.bold),)
                       ],
                     ),
 
@@ -87,7 +87,7 @@ class _SplashScrean extends State<SplashScrean>{
 
                       CircularProgressIndicator(),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("from AGEUP",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),)
+                      Text("from AGEUP",style: TextStyle(color: Colors.redAccent,fontSize: 15.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
