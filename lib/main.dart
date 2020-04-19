@@ -1,4 +1,3 @@
-import 'package:ageapp/Contenidos/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:ageapp/barMenu.dart';
 import 'dart:async';
@@ -15,11 +14,6 @@ class SplashScrean extends StatefulWidget{
   _SplashScrean createState() => _SplashScrean();
 
 }
-
-
-
-
-
 
 class _SplashScrean extends State<SplashScrean>{
 
@@ -45,7 +39,6 @@ class _SplashScrean extends State<SplashScrean>{
         }
       }
     );
-
   }
   @override
   Widget build(BuildContext context){
@@ -80,7 +73,7 @@ class _SplashScrean extends State<SplashScrean>{
                           padding: EdgeInsets.only(top: 10.0),
 
                         ),
-                        Text("FlutterAdd",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight: FontWeight.bold),)
+                        Text("AGEAPP",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight: FontWeight.bold),)
                       ],
                     ),
 
@@ -94,7 +87,7 @@ class _SplashScrean extends State<SplashScrean>{
 
                       CircularProgressIndicator(),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("Nose que poner aqui",style: TextStyle(color: Colors.white,fontSize: 18.0,fontWeight: FontWeight.bold),)
+                      Text("from AGEUP",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
@@ -126,7 +119,8 @@ class pp extends StatelessWidget {
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: AllBar(),
+      home:
+         AllBar()
     );
   }
 }

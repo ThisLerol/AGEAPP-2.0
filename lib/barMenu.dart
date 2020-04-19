@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Home.dart';
 import 'package:ageapp/Contenidos/Mas.dart';
@@ -17,7 +16,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
   @override
   void initState(){
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex: 1,length: 4 );
+    _tabController = new TabController(vsync: this,initialIndex: 0,length: 4 );
   }
 
   Widget build(BuildContext context){
