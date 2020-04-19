@@ -18,9 +18,6 @@ class SplashScrean extends StatefulWidget{
 
 
 
-
-
-
 class _SplashScrean extends State<SplashScrean>{
 
   Future<bool> _CheckSplash() async{
