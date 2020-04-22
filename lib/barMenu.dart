@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Home.dart';
 import 'package:ageapp/Contenidos/Mas.dart';
@@ -75,6 +76,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
 
 
             controller: _tabController,
+
             tabs: <Widget>
             [
 
@@ -82,6 +84,9 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             new Tab(icon: new Icon(Icons.music_note)),
             new Tab(icon: new Icon(Icons.library_books)),
             new Tab(icon: new Icon(Icons.add,size: 30)),
+
+
+
             ]
         ),
       ),
@@ -94,7 +99,6 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             new Musica(),
             new Biblioteca(),
             new Mas(),
-
           ]
       ),
 
@@ -102,6 +106,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
     )
     ;
   }
+
 
 }
 
@@ -120,4 +125,5 @@ class _ImagenBar extends State<ImagenBar> {
   Widget build(BuildContext context){
     return  Image.asset('assets/AGEUP.jpg',height: 367,width: 367,fit: BoxFit.contain,);
   }
+
 }
