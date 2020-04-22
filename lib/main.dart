@@ -18,7 +18,6 @@ class SplashScrean extends StatefulWidget{
 
 
 
-
 class _SplashScrean extends State<SplashScrean>{
 
   Future<bool> _CheckSplash() async{
@@ -52,7 +51,7 @@ class _SplashScrean extends State<SplashScrean>{
           fit: StackFit.expand,
           children: <Widget>[
             Container(
-              decoration: BoxDecoration(color: Colors.redAccent),
+              decoration: BoxDecoration(color: Colors.white),
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -67,7 +66,7 @@ class _SplashScrean extends State<SplashScrean>{
                           backgroundColor: Color.fromRGBO(12, 12, 12, 2),
                           radius: 2,
                           child: Icon(
-                            Icons.add,
+                            Icons.add,//el icono va aqui
                             color: Color.fromRGBO(39, 34, 34, 1),
                             size: 50.0,
 
@@ -78,7 +77,7 @@ class _SplashScrean extends State<SplashScrean>{
                           padding: EdgeInsets.only(top: 10.0),
 
                         ),
-                        Text("FlutterAdd",style: TextStyle(color: Colors.white,fontSize: 24.0,fontWeight: FontWeight.bold),)
+                        Text("FlutterAdd",style: TextStyle(color: Colors.redAccent,fontSize: 24.0,fontWeight: FontWeight.bold),)
                       ],
                     ),
 
@@ -92,7 +91,7 @@ class _SplashScrean extends State<SplashScrean>{
 
                       CircularProgressIndicator(),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("Nose que poner aqui",style: TextStyle(color: Colors.white,fontSize: 18.0,fontWeight: FontWeight.bold),)
+                      Text("Nose que poner aqui",style: TextStyle(color: Colors.redAccent,fontSize: 18.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
@@ -119,12 +118,16 @@ class pp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Ageapp',
+      title: 'AGEAPP',
       theme: new ThemeData(
+
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
-      home: AllBar(),
+
+      home:
+
+       AllBar(),
     );
   }
 }
