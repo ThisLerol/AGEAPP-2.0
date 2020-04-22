@@ -17,7 +17,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
   @override
   void initState(){
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex: 1,length: 4 );
+    _tabController = new TabController(vsync: this,initialIndex: 0,length: 4 );
   }
 
   Widget build(BuildContext context){
@@ -28,11 +28,11 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
         bottom: new TabBar(
 
             controller: _tabController,
-            tabs: <Widget>
-            [new Tab(icon: new Icon(Icons.home)),
-             new Tab(icon: new Icon(Icons.music_note)),
-              new Tab(icon: new Icon(Icons.view_column)),
-              new Tab(icon: new Icon(Icons.add)),
+            tabs: <Widget>[
+              new Tab(icon: new Icon(Icons.info_outline)),
+              new Tab(icon: new Icon(Icons.music_note)),
+              new Tab(icon: new Icon(Icons.library_books)),
+              new Tab(icon: new Icon(Icons.add, size: 30.0,)),
             ]
         ),
       ),
@@ -44,7 +44,6 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             new Musica(),
             new Biblioteca(),
             new Mas(),
-
           ]
       ),
 
