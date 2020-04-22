@@ -3,6 +3,35 @@ import 'package:ageapp/Contenidos/Home.dart';
 import 'package:ageapp/Contenidos/Mas.dart';
 import 'package:ageapp/Contenidos/Biblioteca.dart';
 import 'package:ageapp/Contenidos/Musica.dart';
+import 'package:ageapp/social_media_icons.dart';
+
+class BarImage extends StatefulWidget{
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _BarImage();
+  }
+}
+
+class _BarImage extends State<BarImage>{
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return //ImagenBar();
+
+     Container(
+      child: Column(
+        children: <Widget>[ImagenBar(),
+          AllBar(),
+        ],
+      ),
+      color: Colors.blue,
+    );
+  }
+
+
+}
 
 
 class AllBar extends StatefulWidget{
@@ -15,27 +44,49 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
 
   @override
   void initState(){
+
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex: 0,length: 4 );
+    _tabController = new TabController(vsync: this,initialIndex: 0,length: 4, );
   }
 
   Widget build(BuildContext context){
     return new Scaffold(
 
       appBar: new AppBar(
-        title: new Text("AGEAPP"),
+
+        actions: <Widget>[
+          Padding(child:Icon(SocialMedia.facebook_squared,size: 18,),padding: EdgeInsets.all(5.0),),
+          Padding(child:Icon(SocialMedia.instagram,size: 18,),padding: EdgeInsets.all(5.0),),
+          Padding(child:Icon(SocialMedia.youtube_play,size: 18,),padding: EdgeInsets.all(5.0),),
+          Padding(padding: EdgeInsets.all(5.0),),
+        ],
+        title: Row(
+
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+
+           Text("AGEAPP"),
+
+
+          ],
+
+        ),
         bottom: new TabBar(
+
 
             controller: _tabController,
             tabs: <Widget>
-            [new Tab(icon: new Icon(Icons.home)),
-             new Tab(icon: new Icon(Icons.music_note)),
-              new Tab(icon: new Icon(Icons.library_books)),
-              new Tab(icon: new Icon(Icons.add,size: 30)),
+            [
+
+              new Tab(icon:  new Icon(Icons.info_outline),),
+            new Tab(icon: new Icon(Icons.music_note)),
+            new Tab(icon: new Icon(Icons.library_books)),
+            new Tab(icon: new Icon(Icons.add,size: 30)),
             ]
         ),
       ),
       body: new TabBarView(
+
 
         controller: _tabController,
           children: <Widget>[
@@ -54,5 +105,19 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
 
 }
 
+//Cargando la imagen
 
+class ImagenBar extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _ImagenBar();
+  }
+}
 
+class _ImagenBar extends State<ImagenBar> {
+  @override
+  Widget build(BuildContext context){
+    return  Image.asset('assets/AGEUP.jpg',height: 367,width: 367,fit: BoxFit.contain,);
+  }
+}

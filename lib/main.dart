@@ -114,13 +114,21 @@ class pp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      title: 'Ageapp',
+      title: 'AGEAPP',
       theme: new ThemeData(
+
         primarySwatch: Colors.red,
       ),
       debugShowCheckedModeBanner: false,
       home:
-         AllBar()
+
+       AllBar(),
+
+
+
+
+
+
     );
   }
 }
