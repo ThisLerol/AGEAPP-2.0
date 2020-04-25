@@ -53,6 +53,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
   Widget build(BuildContext context){
     return new Scaffold(
 
+
       appBar: new AppBar(
 
         actions: <Widget>[
@@ -62,6 +63,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
           Padding(padding: EdgeInsets.all(5.0),),
         ],
         title: Row(
+
 
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[

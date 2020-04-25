@@ -76,6 +76,7 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/AGEUP.jpg
+    - assets/Oreja de vango.txt
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
