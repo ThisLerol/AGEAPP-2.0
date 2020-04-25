@@ -73,6 +73,8 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/AGEUP.jpg
+    - assets/foto3.jpg
+    - assets/foto2.jpg
     - assets/fondo.jpg
 #la sangria papaaaaaaaaaa
   fonts:
