@@ -73,9 +73,12 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
     - assets/AGEUP.jpg
+    - assets/foto4.jpg
     - assets/foto3.jpg
     - assets/foto2.jpg
     - assets/fondo.jpg
+    - assets/logo.jpg
+    - assets/logooficial2.png
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
