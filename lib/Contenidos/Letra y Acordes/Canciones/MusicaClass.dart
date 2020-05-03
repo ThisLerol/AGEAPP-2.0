@@ -9,30 +9,30 @@ class MusicaClass {
 
 
   void runNombres(){
-    nombres[0]= "1.Viene tu pueblo a alabar";
-    nombres[1]= "2.El himno de la liberación";
-    nombres[2]= "3.Busca la paz de tu Dios";
-    nombres[3]= "4.No por honra";
-    nombres[4]= "5.Danza mi país";
-    nombres[5]= "6.Para el Señor canta toda la tierra";
-    nombres[6]= "7.Yo soy un militante";
-    nombres[7]= "8.Canto de los líderes";
-    nombres[8]= "9.La unidad";
-    nombres[9]= "10.Isaías 33:14-16";
-    nombres[10]= "11.Tenemos esperanza";
-    nombres[11]= "12.Ayúdame a mirar con tus ojos";
-    nombres[12]= "13.Señor cuando tú me llames";
-    nombres[13]= "14.Escudriñemos nuestros caminos";
-    nombres[14]= "15.Debemos decir y hacer la verdad";
-    nombres[15]= "16.Piedras vivas";
-    nombres[16]= "17.Salmo 8";
-    nombres[17]= "18.HAKUNA MUNGU KAMA WEWE";
-    nombres[18]= "19.Sencilla";
-    nombres[19]= "20.Xote da victoria";
-    nombres[20]= "21.La semilla ";
-    nombres[21]= "22.Salmo 19 ";
-    nombres[22]= "23.Quién sino tú ";
-    nombres[23]= "24.El sancocho";
+    nombres[0]= "Viene tu pueblo a alabar";
+    nombres[1]= "El himno de la liberación";
+    nombres[2]= "Busca la paz de tu Dios";
+    nombres[3]= "No por honra";
+    nombres[4]= "Danza mi país";
+    nombres[5]= "Para el Señor canta toda la tierra";
+    nombres[6]= "Yo soy un militante";
+    nombres[7]= "Canto de los líderes";
+    nombres[8]= "La unidad";
+    nombres[9]= "Isaías 33:14-16";
+    nombres[10]= "Tenemos esperanza";
+    nombres[11]= "Ayúdame a mirar con tus ojos";
+    nombres[12]= "Señor cuando tú me llames";
+    nombres[13]= "Escudriñemos nuestros caminos";
+    nombres[14]= "Debemos decir y hacer la verdad";
+    nombres[15]= "Piedras vivas";
+    nombres[16]= "Salmo 8";
+    nombres[17]= "HAKUNA MUNGU KAMA WEWE";
+    nombres[18]= "Sencilla";
+    nombres[19]= "Xote da victoria";
+    nombres[20]= "La semilla ";
+    nombres[21]= "Salmo 19 ";
+    nombres[22]= "Quién sino tú ";
+    nombres[23]= "El sancocho";
     nombres[24]= "25.Con alegría";
   }
   void runAcordes(tono){

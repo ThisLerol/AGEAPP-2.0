@@ -59,10 +59,6 @@ class _Musica extends State<Musica>{
         //elevation: 0,
         //borderOnForeground: true,
         child: InkWell(
-
-
-
-
             child: Wrap(
 
               direction: Axis.horizontal,
@@ -78,7 +74,7 @@ class _Musica extends State<Musica>{
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children:<Widget>[
-                            LimitedBox(child: Text(musicaData.getnombre(i) ,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
+                            Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$i. "+musicaData.getnombre(i),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
                             Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
                           ]
                         ),
