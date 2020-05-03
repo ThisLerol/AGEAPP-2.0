@@ -2,6 +2,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/ChordMain.dart';
+import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
 
 class Musica extends StatefulWidget{
   @override
@@ -12,65 +13,112 @@ class Musica extends StatefulWidget{
 }
 
 class _Musica extends State<Musica>{
+  MusicaClass musicaData = new MusicaClass();
+
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Container(
+        color: Colors.red[50],
+
         child: ListView(
+
+
           children:
-            ListaCanciones(),
+          ListaCanciones(),
         )
     );
   }
 
   List<Widget> ListaCanciones(){
-    int ai = 99;
+    int ai = 24;
+
+    Color InterCalar(int i){
+      if(i%2==0){
+        return Colors.white;
+      }else{
+        return Colors.red[50];
+      }
+    }
+
+
+
     var arr = new List<Widget>(ai+1);
 
     for( var i = 0 ; i <= ai; i++ ) {
 
-      arr[i] = Card(
-        elevation: 5,
-        borderOnForeground: true,
+      arr[i] = Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
+          color: InterCalar(i),
+          boxShadow: [
+            BoxShadow(color: Colors.red[50], spreadRadius: 0),
+          ],
+        ),
+       // color: InterCalar(i),
+        //elevation: 0,
+        //borderOnForeground: true,
         child: InkWell(
-            splashColor: Colors.blue.withAlpha(30),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => chord(musicTitle: "Cancion $i")),
-              );
-            },
 
-            child: Container(
-              child: Row(
-                children: <Widget>[
-                  Padding(
-                    padding:  EdgeInsets.all(17.0),
-                    child: Icon(Icons.brightness_1, size: 10,),
+
+
+
+            child: Wrap(
+
+              direction: Axis.horizontal,
+              alignment: WrapAlignment.spaceBetween,
+              crossAxisAlignment: WrapCrossAlignment.center,
+              children: <Widget>[
+                  Wrap(
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    alignment: WrapAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                        padding:  EdgeInsets.fromLTRB(8, 0, 0, 0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children:<Widget>[
+                            LimitedBox(child: Text(musicaData.getnombre(i) ,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
+                            Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
+                          ]
+                        ),
+                      ),
+                        Container(
+                        width: 0,
+                        height: 60,
+                      ),
+                    ],
                   ),
-                  Padding(
-                    child: Text("Cancion $i", textAlign: TextAlign.left,style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),),
-                    padding: EdgeInsets.all(1.0),
-                  ),
-                  Container(
-                    width: 160,
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.all(5.0),
-                    child: Icon(CupertinoIcons.right_chevron),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.all(5.0),
-                    child: Icon(CupertinoIcons.play_arrow_solid),
-                  ),
-                  Padding(
-                    padding:  EdgeInsets.all(5.0),
-                    child: Icon(CupertinoIcons.bookmark_solid),
+                Wrap(
+                  alignment: WrapAlignment.spaceAround,
+                    children: <Widget>[
+
+                      InkWell(
+                        splashColor: Colors.red.withAlpha(30),
+                        onTap: () {
+                        Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
+                        );},
+                        child: Padding(
+                          padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
+                          child: Icon(CupertinoIcons.double_music_note,size: 25,),
+                        ),
+                      ),
+                      Padding(
+
+                        padding:  EdgeInsets.fromLTRB(0, 0, 5, 0),
+                        child: Icon(CupertinoIcons.play_arrow_solid,size: 25,),
+                      ),
+                      Padding(
+                        padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
+                        child: Icon(Icons.file_download ,size: 25,),
+
+                      ),
+                    ],
                   )
                 ],
-              ),
-
-            )
+              )
         ),
       );
     }

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.Dart' show rootBundle;
+import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/PlasLetras.dart';
+import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
 
 class chord extends StatefulWidget{
   chord({Key key, this.musicTitle}) : super(key: key);
-  final String musicTitle;
+  final int musicTitle;
 
   @override
   State<StatefulWidget> createState() {
@@ -13,70 +14,136 @@ class chord extends StatefulWidget{
 }
 
 class _chord extends State<chord>{
-String a = "reak acrtText widget, see the documentation for TextStyle.\n";
-
-
-
-
-
-
+  int tono=0;
+  int letraOacorde=1;
+  bool acordesview= false;
+  String bottLetra = "Acordes";
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    var val;
-    checkValue() async {
-      val = getFileData('lib/Contenidos/Letras y Acordes/Canciones/Oreja de vango.txt');
-    }
-
-
-
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.musicTitle),
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(5.0),
-        child: RichText(
-          text: TextSpan(
-            text: "\n",
-            style: TextStyle(
-              color: Colors.black,
-              decoration: TextDecoration.underline,
-              decorationColor: Colors.red,
-              decorationStyle: TextDecorationStyle.wavy,
-              fontSize: 20,
-            ),
-            children: <TextSpan>[
-              TextSpan(text: "Intro:\n"),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: "$val \n",),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: a,),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: a,),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: a,),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: a,),
-              TextSpan(text: ' world!\n'),
-              TextSpan(text: a,),
-              TextSpan(text: ' world!\n'),
+                title: Text(""),//Text(letras().nombreCan(widget.musicTitle.toInt())),
+        actions: <Widget>[
+          Row(
 
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              Align(
+                child: modAcordesView(),
+              ),
+
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: RaisedButton(
+                  shape: new RoundedRectangleBorder(
+                      borderRadius: new BorderRadius.circular(18.0),
+                      side: BorderSide(color: Colors.red)),
+                  color: Colors.white,
+                  textColor: Colors.red,
+                  padding: EdgeInsets.all(8.0),
+                  onPressed: () {
+                    setState(() {
+                      if(letraOacorde==1){
+                        bottLetra = "Letras";
+                        acordesview= true;
+                        letraOacorde=2;
+                      }else{if(letraOacorde==2){
+                        bottLetra = "Acordes";
+                        acordesview= false;
+                        letraOacorde=1;
+                      }}
+
+                    });
+                  },
+                  child: Text(
+                    bottLetra,
+                    style: TextStyle(
+                      fontSize: 14.0,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
-        ),
+          ],
+      ),
+      body: ListView(
+          children: <Widget>[
+            Container(
+              child: Column(
+                children: <Widget>[
+                  Text(letras().nombreCan(widget.musicTitle.toInt()),textAlign: TextAlign.center, style: TextStyle(color: Colors.black,fontSize: 22,decoration: TextDecoration.overline,fontStyle: FontStyle.italic),),
+                  Text("\n"),
+                  Text(letras().letrasand(tono, letraOacorde,widget.musicTitle.toInt()),textAlign: TextAlign.center, style: TextStyle(color: Colors.black,fontSize: 20,decoration: TextDecoration.none,),),
+                ],
+              ),
+            )
+          ]
       )
     );
   }
-}
 
-Future<String> getFile(String path) async {
-  return await rootBundle.loadString(path);
+  Widget modAcordesView(){
+    if(acordesview){
+      return
 
-}
-Future<String> getFileData(String path) async {
+        Align(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              RawMaterialButton(
+                onPressed: () {
+                  setState(() {
+                    if(tono <= 0){
+                      tono = 12;
+                    }else{
+                      tono--;
+                    }
+                  });
+                },
+                elevation: 2.0,
+                fillColor: Colors.white,
+                child: Icon(
+                  Icons.remove,
+                  size: 20.0,
+                  color: Colors.red,
+                ),
+                padding: EdgeInsets.all(0.0),
+                shape: CircleBorder(
+                  side: BorderSide(color: Colors.red)
+                ),
+              ),
+              RawMaterialButton(
+                onPressed: () {
+                  setState(() {
+                    if(tono >= 12){
+                      tono = 0;
+                    }else{
+                      tono++;
+                    }
 
-  String data = await getFile(path);
-  return data;
+                  });
+                },
+                elevation: 2.0,
+                fillColor: Colors.white,
+                child: Icon(
+                  Icons.add,
+                  size: 20.0,
+                  color: Colors.red,
+                ),
+                padding: EdgeInsets.all(0.0),
+                shape: CircleBorder(
+                    side: BorderSide(color: Colors.red)
+                ),
+              )
+            ],
+
+      ),
+        );
+    } else{
+      return Container();
+    }
+  }
 }
