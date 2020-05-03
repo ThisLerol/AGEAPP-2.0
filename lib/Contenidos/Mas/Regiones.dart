@@ -28,12 +28,12 @@ class Regiones extends StatelessWidget {
           children: <Widget>[
             Container(
               color: Colors.greenAccent,
-              width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 1.4,
+              //width: MediaQuery.of(context).size.width,
+              //height: MediaQuery.of(context).size.height / 1.4,
               child: Padding(
                 padding: const EdgeInsets.all(0.0),
                 child: Container(
-                  height: 500,
+                  height: 200,
                   decoration: MiCaja(),
                   child: Cuadritos(context),
                 ),
@@ -62,8 +62,8 @@ class Regiones extends StatelessWidget {
         k = i*contenedor.length+j+1;
         nombre = k.toString();
         contenedor[j] = Container(
-          width: MediaQuery.of(context).size.width/contenedor.length,
-          height: MediaQuery.of(context).size.height/21,
+          //width: MediaQuery.of(context).size.width/contenedor.length,
+          //height: MediaQuery.of(context).size.height/21,
           decoration: MiCaja2(),
           child: Text(nombre),
         );
