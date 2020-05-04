@@ -18,18 +18,10 @@ environment:
 
 dependencies:
   flutter:
-<<<<<<< HEAD
-    sdk: flutter 
-
-    
+    sdk: flutter   
   url_launcher: ^4.2.0+3
   flappy_search_bar: 1.4.1
 
-
-=======
-    sdk: flutter
-  url_launcher: ^4.2.0+3
->>>>>>> 3cb4569b28c86c017abdb3bb2e06b1117029cca2
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
@@ -87,19 +79,6 @@ flutter:
     - assets/foto3.jpg
     - assets/foto2.jpg
     - assets/fondo.jpg
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-
-
-
     - res/estudio-biblico-creativo.jpg
     - res/la-paz-del-perdon.jpg
     - res/desafio-a-servir.jpg
@@ -152,13 +131,8 @@ flutter:
     - res/tiempo-de-mision.jpg
     
     
-
-#fuente sangria 
-=======
-    - assets/logo.jpg
-    - assets/logooficial2.png
 #la sangria papaaaaaaaaaa
->>>>>>> 3cb4569b28c86c017abdb3bb2e06b1117029cca2
+
   fonts:
     - family:  SocialMedia
       fonts:
