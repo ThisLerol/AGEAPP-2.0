@@ -18,7 +18,10 @@ environment:
 
 dependencies:
   flutter:
-    sdk: flutter
+    sdk: flutter 
+  url_launcher: ^4.2.0+3
+  flappy_search_bar: 1.4.1
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -76,7 +79,72 @@ flutter:
     - assets/foto3.jpg
     - assets/foto2.jpg
     - assets/fondo.jpg
-#la sangria papaaaaaaaaaa
+
+
+
+
+
+
+
+
+
+
+
+
+    - res/estudio-biblico-creativo.jpg
+    - res/la-paz-del-perdon.jpg
+    - res/desafio-a-servir.jpg
+    - res/tendriamos-que-haber-gritado.jpg
+    - res/mision-de-dios.jpg
+    - res/mision-en-transformacion.jpg
+    - res/precio-de-la-gracia.jpg
+    - res/escritos-esenciales.jpg
+    - res/vida-en-comunidad.jpg
+    - res/etica.jpg
+    - res/lectio-divina.jpg
+    - res/existe-dios.jpg
+    - res/cristianismo.jpg
+    - res/el-principio-de-las-cosas.jpg
+    - res/la-mujer-en-el-cristianismo.jpg
+    - res/dinero-y-poder.jpg
+    - res/la-edad-tecnica.jpg
+    - res/cristianismo-y-ciencia.jpg
+    - res/progreso-peregrino.jpg
+    - res/sentido-de-la-vida.jpg
+    - res/asi-leo-la-biblia.jpg
+    - res/creer-es-tambien-pensar.jpg
+    - res/cristianismo-basico.jpg
+    - res/el-cristiano-contemporneo.jpg
+    - res/estudiantes-de-la-palabra.jpg
+    - res/identidad-evangelica.jpg
+    - res/la-cruz-de-cristo.jpg
+    - res/desafios-del-cristiano.jpg
+    - res/espiritu-santo.jpg
+    - res/sobre-la-roca.jpg
+    - res/sermon-del-monte.jpg
+    - res/juan-4.jpg
+    - res/lucas-3.jpg
+    - res/marcos-2.jpg
+    - res/mateo-1.jpg
+    - res/grupos-de-jesus.jpg
+    - res/jesus-aproximacion.jpg
+    - res/jesus-nazaret.jpg
+    - res/rompamos-silencio.jpg
+    - res/pentateuco.jpg
+    - res/el-pastor-como-consejero.jpg
+    - res/se-hizo-hombre.jpg
+    - res/todos-somos-teologos.jpg
+    - res/que-es-mision-integral.jpg
+    - res/bases-biblicas.jpg
+    - res/el-evangelio-hoy.jpg
+    - res/mision-integral.jpg
+    - res/evangelizar-hoy.jpg
+    - res/la-chispa-y-la-llama.jpg
+    - res/tiempo-de-mision.jpg
+    
+    
+
+#fuente sangria 
   fonts:
     - family:  SocialMedia
       fonts:

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Home.dart';
 import 'package:ageapp/Contenidos/Mas.dart';
-import 'package:ageapp/Contenidos/Biblioteca.dart';
+import 'package:ageapp/Contenidos/Books/book.dart';
 import 'package:ageapp/Contenidos/Musica.dart';
 import 'package:ageapp/social_media_icons.dart';
 
@@ -80,7 +80,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             tabs: <Widget>
             [
 
-              new Tab(icon:  new Icon(Icons.info_outline),),
+            new Tab(icon:  new Icon(Icons.info_outline),),
             new Tab(icon: new Icon(Icons.music_note)),
             new Tab(icon: new Icon(Icons.library_books)),
             new Tab(icon: new Icon(Icons.add,size: 30)),
