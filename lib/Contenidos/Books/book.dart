@@ -11,7 +11,7 @@ class Biblioteca extends StatelessWidget {
           tag: book.title,
           child: Material(
             elevation: 15.0,
-            shadowColor: Colors.yellow.shade900,
+            shadowColor: Color(0XFF9E9E9E),
             child: InkWell(
               onTap: () {
                 Navigator.pushNamed(context, 'detail/${book.title}');            
