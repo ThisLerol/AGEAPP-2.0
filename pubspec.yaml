@@ -19,6 +19,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter 
+
+    
   url_launcher: ^4.2.0+3
   flappy_search_bar: 1.4.1
 
