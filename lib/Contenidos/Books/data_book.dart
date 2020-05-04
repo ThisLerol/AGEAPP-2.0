@@ -14,10 +14,10 @@ class Book {
 
 final List<Book> books = [
   Book('El Estudio biblico creativo', 'Ada Lum & Ruth Siemens',
-      'Año: 1977', 'res/estudio-biblico-creativo.jpg', 1.5, 130,'https://drive.google.com/file/d/1Wr5CbeVwAon0wgj1pn0_K_aMWenfp2AR/view?usp=sharing',
+      'Año: 1977', 'res/estudio-biblico-creativo.jpg', 1.5, 227,'https://drive.google.com/file/d/1Wr5CbeVwAon0wgj1pn0_K_aMWenfp2AR/view?usp=sharing',
       'EL ESTUDIO BIBLICO CREATIVO es un manual elaborado para quienes quieren capacitar a otros en lo que atañe al estudio bíblico básico y a los grupos de discusión o encuentros bíblicos -una manera revolucionaria de encarar el estudio de la Biblia. Su mayor ventaja, y, con toda seguridad, lo que hace diferente de muchos otros intentos en el campo de la capacitación, radica en la funcionalidad de sus conocimientos como en la honestidad de su propósito (no producir automáticamente expertos bíblicos si no despertar los dones de Dios). Esta obra, escrita por dos autoras ampliamente conocidas por su erudición y experiencia, forma parte de la serie ENCUENTROS BIBLICOS, de la cual pasa a construir ahora su libro base.'),
   Book('La paz del perdon', 'Charles Stanley',
-      'Año: 1991', 'res/la-paz-del-perdon.jpg', 1.5, 83,'https://drive.google.com/file/d/1SfLicsIOB5_gx6iyZjDcNfUC9y475gbq/view?usp=sharing',
+      'Año: 1991', 'res/la-paz-del-perdon.jpg', 1.5, 160,'https://drive.google.com/file/d/1SfLicsIOB5_gx6iyZjDcNfUC9y475gbq/view?usp=sharing',
       'El perdón es una necesidad critica en nuestra vida, pues sin el es imposible disfrutar de paz.Entretejiendo con maestría anécdotas sacadas de su propia vida y de la vida de las personas a quienes aconseja, Charles Stanley nos demuestra de que manera la paz que recibimos por medio del perdón afecta nuestras reacciones básicas hacia nosotros mismos, nuestros semejantes y Dios.'),
   Book('Desafio a servir', 'Charles Swindoll',
       'Año: 1983', 'res/desafio-a-servir.jpg', 1.5, 210,'https://drive.google.com/file/d/1duhRJpP-lVr1BrjJnmE-t27HBJ-k-cHn/view?usp=sharing',

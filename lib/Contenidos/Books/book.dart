@@ -1,4 +1,3 @@
-
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Books/data_book.dart';
@@ -6,21 +5,7 @@ import 'package:ageapp/Contenidos/Books/data_book.dart';
 class Biblioteca extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    //app bar
-    final appBar = AppBar(
-      elevation: .5,
-      title: Text('Libros'),
-      actions: <Widget>[
-        IconButton(
-          icon: Icon(Icons.search),
-          onPressed: () {
-            showSearch(context:context, delegate:DataSearch());
-          },
-        ),
-      ],
-    );
-
-
+ 
  ///crear  mosaico de libros Hero
     createTile(Book book) => Hero(
           tag: book.title,
@@ -29,8 +14,7 @@ class Biblioteca extends StatelessWidget {
             shadowColor: Colors.yellow.shade900,
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'detail/${book.title}');
-              
+                Navigator.pushNamed(context, 'detail/${book.title}');            
               },
               child: Image(
                 image: AssetImage(book.image),
@@ -58,8 +42,19 @@ class Biblioteca extends StatelessWidget {
     );
 
     return Scaffold( 
-      appBar: appBar,
+     
       body: grid ,
+      floatingActionButton:FloatingActionButton(
+      child:Icon(Icons.search),
+       onPressed: () {
+            showSearch(context:context, delegate:DataSearch());
+          },
+       shape:RoundedRectangleBorder(
+         borderRadius:BorderRadius.all(Radius.circular(16)) 
+         ),
+        elevation:5,
+        highlightElevation:10,
+    )
     );
   }
 }

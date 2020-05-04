@@ -99,6 +99,7 @@ class Detail extends StatelessWidget {
         child: Text(
           book.description,
           style: TextStyle(fontSize: 13.0, height: 1.5),
+          textAlign: TextAlign.justify,
         ),
       ),
     );
