@@ -22,8 +22,6 @@ class _Musica extends State<Musica>{
         color: Colors.red[50],
 
         child: ListView(
-
-
           children:
           ListaCanciones(),
         )
@@ -40,8 +38,6 @@ class _Musica extends State<Musica>{
         return Colors.red[50];
       }
     }
-
-
 
     var arr = new List<Widget>(ai+1);
 
@@ -60,7 +56,6 @@ class _Musica extends State<Musica>{
         //borderOnForeground: true,
         child: InkWell(
             child: Wrap(
-
               direction: Axis.horizontal,
               alignment: WrapAlignment.spaceBetween,
               crossAxisAlignment: WrapCrossAlignment.center,
@@ -88,7 +83,6 @@ class _Musica extends State<Musica>{
                 Wrap(
                   alignment: WrapAlignment.spaceAround,
                     children: <Widget>[
-
                       InkWell(
                         splashColor: Colors.red.withAlpha(30),
                         onTap: () {
@@ -109,7 +103,6 @@ class _Musica extends State<Musica>{
                       Padding(
                         padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
                         child: Icon(Icons.file_download ,size: 25,),
-
                       ),
                     ],
                   )

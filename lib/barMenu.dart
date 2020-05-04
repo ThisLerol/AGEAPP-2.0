@@ -71,11 +71,12 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             controller: _tabController,
             tabs: <Widget>
             [
-              new Tab(icon:  new Icon(Icons.info_outline),),
+               new Tab(icon:  new Icon(Icons.info_outline),),
             new Tab(icon: new Icon(Icons.music_note)),
             new Tab(icon: new Icon(Icons.library_books)),
             new Tab(icon: new Icon(Icons.add,size: 30)),
-            ]
+              //PONES MAS Y PONES EL ANCHO
+              ]
         ),
       ),
       body: new TabBarView(
@@ -85,7 +86,8 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             new Musica(),
             new Biblioteca(),
             new Mas(),
-          ]
+            //PONES MAS
+           ]
       ),
     )
     ;
