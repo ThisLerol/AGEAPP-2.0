@@ -1,7 +1,10 @@
-import 'package:ageapp/Contenidos/Home.dart';
 import 'package:flutter/material.dart';
 import 'package:ageapp/barMenu.dart';
 import 'dart:async';
+import 'package:ageapp/Contenidos/Books/data_book.dart';
+import 'package:ageapp/Contenidos/Books/detail_book.dart';
+
+
 
 void main(){
   runApp(new MaterialApp(
@@ -110,8 +113,6 @@ class _SplashScrean extends State<SplashScrean>{
 
 }
 
-
-
 //Principal
 class pp extends StatelessWidget {
   // This widget is the root of your application.
@@ -120,14 +121,25 @@ class pp extends StatelessWidget {
     return new MaterialApp(
       title: 'AGEAPP',
       theme: new ThemeData(
-
         primarySwatch: Colors.red,
+        platform: TargetPlatform.android
       ),
       debugShowCheckedModeBanner: false,
 
-      home:
+      home:AllBar(),
+      onGenerateRoute: (settings) => generateRoute(settings),
+    );  
+  }
+    generateRoute(RouteSettings settings) {
+    final path = settings.name.split('/');
+    final title = path[1];
 
-       AllBar(),
+    Book book = books.firstWhere((it) => it.title == title);
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (context) => Detail(book),
+      
     );
   }
+  
 }
