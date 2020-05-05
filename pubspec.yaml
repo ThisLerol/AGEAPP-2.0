@@ -85,6 +85,11 @@ flutter:
     - assets/fotovu.jpg
     - assets/fotojdn.jpg
     - assets/mapa.png
+    - assets/RCC.jpg
+    - assets/RN.jpg
+    - assets/RCO.jpg
+    - assets/RO.jpg
+    - assets/RS.jpg
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
