@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Home.dart';
 import 'package:ageapp/Contenidos/Mas.dart';
 import 'package:ageapp/Contenidos/Books/book.dart';
+import 'package:ageapp/Contenidos/Materiales.dart';
 import 'package:ageapp/Contenidos/Musica.dart';
 import 'package:ageapp/social_media_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -47,13 +48,11 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
   void initState(){
 
     super.initState();
-    _tabController = new TabController(vsync: this,initialIndex: 0,length: 4, );
+    _tabController = new TabController(vsync: this,initialIndex: 0,length: 5, );
   }
 
   Widget build(BuildContext context){
     return new Scaffold(
-
-
       appBar: new AppBar(
         actions: <Widget>[
           Padding(child: InkWell(child:Icon(SocialMedia.facebook_squared,size: 18, ),onTap: () => launch('https://www.facebook.com/ageup.ifes'),),padding: EdgeInsets.all(5.0),),
@@ -68,13 +67,15 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
           ],
         ),
         bottom: new TabBar(
+            isScrollable: true,
             controller: _tabController,
             tabs: <Widget>
             [
-            new Tab(icon:  new Icon(Icons.info_outline),),
-            new Tab(icon: new Icon(Icons.music_note)),
-            new Tab(icon: new Icon(Icons.library_books)),
-            new Tab(icon: new Icon(Icons.add,size: 30)),
+            Container(child: new Tab(icon:  new Icon(Icons.info_outline),),width: MediaQuery.of(context).size.width/6,),
+            Container(child: new Tab(icon: new Icon(Icons.music_note)),width: MediaQuery.of(context).size.width/6,),
+            Container(child: new Tab(icon: new Icon(Icons.book)),width: MediaQuery.of(context).size.width/6,),
+              Container(child: new Tab(icon: new Icon(Icons.library_books)),width: MediaQuery.of(context).size.width/6,),
+            Container(child: new Tab(icon: new Icon(Icons.add,size: 30)),width: MediaQuery.of(context).size.width/6,),
               //PONES MAS Y PONES EL ANCHO
               ]
         ),
@@ -85,6 +86,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             new Home(),
             new Musica(),
             new Biblioteca(),
+            new Materiales(),
             new Mas(),
             //PONES MAS
            ]
