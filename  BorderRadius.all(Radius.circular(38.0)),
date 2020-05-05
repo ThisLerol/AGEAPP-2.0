@@ -1,0 +1,178 @@
+[33mcommit 3cb4569b28c86c017abdb3bb2e06b1117029cca2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sun May 3 02:05:38 2020 -0500
+
+    Problema de dpi de pantalla de Sebastian (se supone arreglado)
+
+[33mcommit 2476cd2a86316d36f2e41e1b458c78d5f292d522[m
+Merge: ade3063 08bb9bd
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sun May 3 00:52:04 2020 -0500
+
+    Problemas en el YAML Assets/
+
+[33mcommit 08bb9bd6d050993b8898ed48cbb2eaaa75810034[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sun May 3 00:46:02 2020 -0500
+
+    Inconos de AppBar Funcionales (con link), Biblioteca de Musica ya tiene todas las musicas
+
+[33mcommit 8488240bcc6e920935ccc330acc01e9fe5605289[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sun May 3 00:41:01 2020 -0500
+
+    "Link de Icons en el BarApp"
+    "Letras y titulos completados"
+    ""
+
+[33mcommit ade3063f6dd5ef101f1e20f8d731883a1c560508[m
+Merge: 07c57ea 2e2a3a5
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Thu Apr 30 21:59:52 2020 -0500
+
+    Merge branch 'master' of https://github.com/ThisLerol/AGEAPP-2.0 into mas
+
+[33mcommit 07c57ea85c44c915e00214109e527a3be4cef987[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Thu Apr 30 21:43:58 2020 -0500
+
+    foto de fondo del Mas
+
+[33mcommit 2e2a3a5e0f396a29189b2523438aa4e40173124e[m[33m ([m[1;31morigin/home[m[33m, [m[1;32mhome[m[33m)[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Thu Apr 30 21:43:30 2020 -0500
+
+    cambios en el Home 2 fotos nuevas y la inclusión de botón "¿Qué es AgeApp?"
+
+[33mcommit 0284885eed5069ce4cd01ad6d5e7a3af61e968a4[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Thu Apr 30 21:39:29 2020 -0500
+
+    Se han creado las 4 opciones del "Mas", una de regiones, otra de contactos, otra de más info y una de juego que está en evaluación
+
+[33mcommit 9d4a1a2bf58e2dc4777c65754540c6ec9fff476d[m
+Merge: 2dab360 a797fd6
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Fri Apr 24 23:21:40 2020 -0500
+
+    Merge branch 'master' of https://github.com/ThisLerol/AGEAPP-2.0 into _Musica
+    
+    # Conflicts:
+    #       pubspec.yaml
+    Se agregaron mas assets
+
+[33mcommit 2dab360b9890c39296088b99266420a6ed67b092[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Fri Apr 24 23:18:42 2020 -0500
+
+    Avance en musicas .. capturar .txt
+
+[33mcommit a797fd63845de6e8853e69836ed2ac4d81392695[m
+Merge: efa7450 eca8cc6
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Fri Apr 24 23:10:05 2020 -0500
+
+    Merge branch 'home'
+
+[33mcommit eca8cc65a90adaed636a1e0f6db4db65d4d2324f[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Fri Apr 24 23:00:43 2020 -0500
+
+    cambios en assets incluir 2 imágenes más fot2 y foto3
+
+[33mcommit efa7450c94f7e67ee55318c9edd23069d98df591[m
+Merge: 9f8c546 48e08fd
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Wed Apr 22 00:07:24 2020 -0500
+
+    Merge branch 'req_meusica' of https://github.com/ThisLerol/AGEAPP-2.0
+
+[33mcommit 6fcd7bbbe779fbe6b2a921b7dedf8919e19427bc[m
+Merge: 307f06e 9f8c546
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Wed Apr 22 00:01:05 2020 -0500
+
+    conflicto resuelto cambio en el main y yaml
+
+[33mcommit 9f8c5462540272d17db93b18d19d984757da7f2c[m
+Merge: c9630ad f14da27
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Tue Apr 21 23:34:32 2020 -0500
+
+    Merge branch 'master' of https://github.com/ThisLerol/AGEAPP-2.0
+    
+    # Conflicts:
+    Se cambio el orden de el APPBAR ...., aprecieron comentarios sin las "//"
+    #       lib/barMenu.dart
+    #       lib/main.dart
+
+[33mcommit 48e08fdd8a50c11bce72f76e2ea0727c82926e39[m[33m ([m[1;31morigin/req_meusica[m[33m)[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Tue Apr 21 23:20:34 2020 -0500
+
+    Iconos alternativos al menur bar
+
+[33mcommit c9630adff8350e6332f6c7fd450d09eb6643699d[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Tue Apr 21 23:14:22 2020 -0500
+
+    Modificacion del APPBAR: iconos de redes sociales, iconos en asset , TTF de iconos en fonts/
+
+[33mcommit f14da2790cbc3dc3f0148236a913190cb0a32bf7[m
+Merge: ce09380 e2ac6d4
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Tue Apr 21 22:44:29 2020 -0500
+
+    Merge branch 'master' of https://github.com/ThisLerol/AGEAPP-2.0
+
+[33mcommit 307f06efdfbb0dd412abfdfe904249fd73a27dbd[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Tue Apr 21 22:42:48 2020 -0500
+
+    Hay una imagen de prueba, puse el contenido de especificación en resumen sobre AGEUP Y CBU
+
+[33mcommit ce0938081098cf6337a07fef26fb6ceeaed329cb[m
+Author: LEOSEBAS <leonardosebastian990@gmail.com>
+Date:   Tue Apr 21 22:17:15 2020 -0500
+
+    He cambiado el logo de home por el de info, cambio en el tamño del logo +
+
+[33mcommit e2ac6d4cb1eafefe5485c1cf94f3c37075363d76[m
+Merge: 15443a0 dfcfb56
+Author: aventura11 <paul_avr11@hotmail.com>
+Date:   Sun Apr 19 13:21:00 2020 -0500
+
+    Merge branch 'master' of https://github.com/ThisLerol/AGEAPP-2.0
+    
+    # Conflicts:
+    #       lib/main.dart
+
+[33mcommit 15443a047db36d429013eab4aa4bbe5a152e725e[m
+Author: aventura11 <paul_avr11@hotmail.com>
+Date:   Sun Apr 19 13:14:39 2020 -0500
+
+    librerias instaladas pendientes
+
+[33mcommit dfcfb5619bf9393be9f82c8e0a3fecd0af08e21e[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sat Apr 18 22:32:14 2020 -0500
+
+    Splash fondo blanco
+
+[33mcommit d5cc59feff7381d4eb4bae229c5fa2f0ae79e280[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sat Apr 18 22:20:02 2020 -0500
+
+    Mas .. icon.mas size 30
+
+[33mcommit c70a13f46f051edb698354bb80529d446a25274d[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sat Apr 18 22:15:41 2020 -0500
+
+    Splash mejorado
+
+[33mcommit c59cbdc569ad4be3a4ee7a81e75f845bd1128e4a[m
+Author: ThisLerol <leo.medina1406@gmail.com>
+Date:   Sat Apr 18 21:05:12 2020 -0500
+
+    Proyecto AGEAPP 2.0

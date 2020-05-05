@@ -10,15 +10,19 @@ class Biblioteca extends StatelessWidget {
     createTile(Book book) => Hero(
           tag: book.title,
           child: Material(
+            borderRadius: BorderRadius.all(Radius.circular(10.0)),
             elevation: 15.0,
             shadowColor: Color(0XFF9E9E9E),
             child: InkWell(
               onTap: () {
                 Navigator.pushNamed(context, 'detail/${book.title}');            
               },
-              child: Image(
-                image: AssetImage(book.image),
-                fit: BoxFit.cover,
+              child: ClipRRect(
+                borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                child: Image(
+                  image: AssetImage(book.image),
+                  fit: BoxFit.cover,
+                ),
               ),
             ),
           ),
