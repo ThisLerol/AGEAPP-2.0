@@ -30,7 +30,7 @@ class Detail extends StatelessWidget {
             tag: book.title,
             child: Material(
               elevation: 15.0,
-              shadowColor: Colors.yellow.shade900,
+              shadowColor: Color(0XFF9E9E9E),
               child: Image(
                 image: AssetImage(book.image),
                 fit: BoxFit.cover,
@@ -66,14 +66,14 @@ class Detail extends StatelessWidget {
         ),
         SizedBox(height: 32.0),
         Material(
-          borderRadius: BorderRadius.circular(20.0),
+          borderRadius: BorderRadius.circular(10.0),
           shadowColor: Colors.blue.shade200,
           elevation: 5.0,
           child: MaterialButton(
             onPressed: _launchURL,
             minWidth: 160.0,
             color: Colors.blue,
-            child: text('DESCARGAR', color: Colors.white, size: 13),
+            child: text('Descargar', color: Colors.white, size: 13),
              
           ),
         )

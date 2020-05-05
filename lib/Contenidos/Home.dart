@@ -34,7 +34,7 @@ class Home extends StatelessWidget {
                    onTap: () {
                      return showDialog<void>(
                        context: context,
-                       barrierDismissible: false, // user must tap button!
+                       barrierDismissible: false, // el usuario debe tocar el botón!
                        builder: (BuildContext context) {
                          return AlertDialog(
                            title:Text(

@@ -18,12 +18,18 @@ class _Musica extends State<Musica>{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Container(
-        color: Colors.red[50],
+    return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.search, size: 25,),
+        onPressed: (){
+      },
 
-        child: ListView(
 
+      ),
 
+       // color: Colors.red[50],
+
+        body: ListView(
           children:
           ListaCanciones(),
         )
@@ -41,11 +47,10 @@ class _Musica extends State<Musica>{
       }
     }
 
-
-
     var arr = new List<Widget>(ai+1);
 
     for( var i = 0 ; i <= ai; i++ ) {
+      var a = i+1;
 
       arr[i] = Container(
         decoration: BoxDecoration(
@@ -60,7 +65,6 @@ class _Musica extends State<Musica>{
         //borderOnForeground: true,
         child: InkWell(
             child: Wrap(
-
               direction: Axis.horizontal,
               alignment: WrapAlignment.spaceBetween,
               crossAxisAlignment: WrapCrossAlignment.center,
@@ -71,12 +75,19 @@ class _Musica extends State<Musica>{
                     children: <Widget>[
                       Padding(
                         padding:  EdgeInsets.fromLTRB(8, 0, 0, 0),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children:<Widget>[
-                            Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$i. "+musicaData.getnombre(i),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
-                            Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
-                          ]
+                        child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
+                            );},
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children:<Widget>[
+                              Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$a. "+musicaData.getnombre(i),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
+                              Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
+                            ]
+                          ),
                         ),
                       ),
                         Container(
@@ -88,7 +99,6 @@ class _Musica extends State<Musica>{
                 Wrap(
                   alignment: WrapAlignment.spaceAround,
                     children: <Widget>[
-
                       InkWell(
                         splashColor: Colors.red.withAlpha(30),
                         onTap: () {
@@ -109,7 +119,6 @@ class _Musica extends State<Musica>{
                       Padding(
                         padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
                         child: Icon(Icons.file_download ,size: 25,),
-
                       ),
                     ],
                   )
