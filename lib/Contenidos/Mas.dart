@@ -51,16 +51,22 @@ class Mas extends StatelessWidget {
                                           child: Column(
                                             children: <Widget>[
                                                 Container(
+                                                  width: ((MediaQuery.of(context).size.width - 40) /6),
+                                                  height:((MediaQuery.of(context).size.width - 40) /6),
                                                   child: Icon(Icons.find_in_page, size: ((MediaQuery.of(context).size.width - 40) /6) ,/*color: Colors.redAccent,*/),
-                                                  padding: EdgeInsets.all(5.0),
+                                                  padding: EdgeInsets.all(0.0),
                                                 ),
                                                 Container(
+                                                  height:((MediaQuery.of(context).size.width - 40) /6),
                                                   padding: EdgeInsets.all(5),
-                                                  child: Text(
-                                                    "Regiones", style: TextStyle(
-                                                    fontSize: 20.0,
-                                                    fontStyle: FontStyle.italic,
-                                                  ),),
+                                                  child: FittedBox(
+                                                    fit: BoxFit.contain,
+                                                    child: Text(
+                                                      "Regiones", style: TextStyle(
+                                                      fontSize: 60.0,
+                                                      fontStyle: FontStyle.italic,
+                                                    ),),
+                                                  ),
                                                 ),
                                             ],
                                           ),
@@ -79,26 +85,27 @@ class Mas extends StatelessWidget {
                                         decoration: MiCaja(),
                                         child: Center(
                                           child: Column(
-                                            children: <Widget>[
-                                              Container(
-                                                  child:Column(
                                                       children: <Widget>[
                                                         Container(
+                                                          width: ((MediaQuery.of(context).size.width - 40) /6),
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
                                                           child: Icon(Icons.contacts, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
-                                                          padding: EdgeInsets.all(10.0),
+                                                          padding: EdgeInsets.all(0.0),
                                                         ),
                                                         Container(
-                                                          child: Text(
-                                                            "Contactos", style: TextStyle(
-                                                            fontSize: 20.0,
-                                                            fontStyle: FontStyle.italic,
-                                                          ),),
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
+                                                          child: FittedBox(
+                                                            fit: BoxFit.contain,
+                                                            child: Text(
+                                                              "Contactos", style: TextStyle(
+                                                              fontSize: 60.0,
+                                                              fontStyle: FontStyle.italic,
+                                                            ),),
+                                                          ),
                                                         ),
                                                       ]
                                                   )
-                                              ),
-                                            ],
-                                          ),
+
                                         ),
                                       ),
                                     ),
@@ -113,27 +120,28 @@ class Mas extends StatelessWidget {
                                         decoration: MiCaja(),
                                         child: Center(
                                           child: Column(
-                                            children: <Widget>[
-                                              Container(
-                                                  child:Column(
                                                       children: <Widget>[
                                                         Container(
+                                                          width: ((MediaQuery.of(context).size.width - 40) /6),
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
                                                           child: Icon(Icons.info, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
-                                                          padding: EdgeInsets.all(10.0),
+                                                          padding: EdgeInsets.all(0.0),
                                                         ),
                                                         Container(
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
                                                           padding: EdgeInsets.all(0),
-                                                          child: Text(
-                                                            "Más info", style: TextStyle(
-                                                            fontSize: 20.0,
-                                                            fontStyle: FontStyle.italic,
-                                                          ),),
+                                                          child: FittedBox(
+                                                            fit: BoxFit.contain,
+                                                            child: Text(
+                                                              "Más info", style: TextStyle(
+                                                              fontSize: 60.0,
+                                                              fontStyle: FontStyle.italic,
+                                                            ),),
+                                                          ),
                                                         ),
                                                       ]
                                                   )
-                                              ),
-                                            ],
-                                          ),
+
                                         ),
                                       ),
                                     ),
@@ -148,28 +156,29 @@ class Mas extends StatelessWidget {
                                         decoration: MiCaja(),
                                         child: Center(
                                           child: Column(
-                                            children: <Widget>[
-                                              Container(
-                                                  child:Column(
                                                       mainAxisAlignment: MainAxisAlignment.center,
                                                       children: <Widget>[
                                                         Container(
+                                                          width: ((MediaQuery.of(context).size.width - 40) /6),
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
                                                           child: Icon(Icons.videogame_asset, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
-                                                          padding: EdgeInsets.all(10.0),
+                                                          padding: EdgeInsets.all(0.0),
                                                         ),
                                                         Container(
+                                                          //width: ((MediaQuery.of(context).size.width - 40) /6),
+                                                          height:((MediaQuery.of(context).size.width - 40) /6),
                                                           padding: EdgeInsets.all(0),
-                                                          child: Text(
-                                                            "Juego", style: TextStyle(
-                                                            fontSize: 20.0,
-                                                            fontStyle: FontStyle.italic,
-                                                          ),),
+                                                          child: FittedBox(
+                                                            fit: BoxFit.fitWidth,
+                                                            child: Text(
+                                                              "Juego", style: TextStyle(
+                                                              fontSize: 20.0,
+                                                              fontStyle: FontStyle.italic,
+                                                            ),),
+                                                          ),
                                                         ),
                                                       ]
                                                   )
-                                              ),
-                                            ],
-                                          ),
                                         ),
                                       ),
                                     ),
