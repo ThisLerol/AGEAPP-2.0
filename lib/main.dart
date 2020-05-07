@@ -80,7 +80,7 @@ class _SplashScrean extends State<SplashScrean>{
                           padding: EdgeInsets.only(top: 10.0),
 
                         ),
-                        Text("FlutterAdd",style: TextStyle(color: Colors.redAccent,fontSize: 24.0,fontWeight: FontWeight.bold),)
+                        Text("AGEAPP",style: TextStyle(color: Colors.redAccent,fontSize: 24.0,fontWeight: FontWeight.bold),)
                       ],
                     ),
 
@@ -94,7 +94,7 @@ class _SplashScrean extends State<SplashScrean>{
 
                       CircularProgressIndicator(),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("Nose que poner aqui",style: TextStyle(color: Colors.redAccent,fontSize: 18.0,fontWeight: FontWeight.bold),)
+                      Text("Ageapp de Ageup",style: TextStyle(color: Colors.redAccent,fontSize: 18.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )

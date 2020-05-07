@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/ChordMain.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
+import 'package:ageapp/Contenidos/Letra y Acordes/Buscar.dart';
+
 
 class Musica extends StatefulWidget{
   @override
@@ -14,19 +16,18 @@ class Musica extends StatefulWidget{
 
 class _Musica extends State<Musica>{
   MusicaClass musicaData = new MusicaClass();
+  var controller = 0;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
       floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.search, size: 25,),
+        child: Icon(Icons.search),
         onPressed: (){
-      },
-
-
+          showSearch(context:context, delegate:Buscar());
+        },
       ),
-
        // color: Colors.red[50],
 
         body: ListView(

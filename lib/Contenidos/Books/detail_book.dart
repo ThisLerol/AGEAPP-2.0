@@ -42,7 +42,7 @@ class Detail extends StatelessWidget {
       ],
     );
 
-    ///detalle arriba a la derecha
+    //detalle arriba a la derecha
     final topRight = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -91,7 +91,7 @@ class Detail extends StatelessWidget {
       ),
     );
 
-    ///descripción del texto desplazable
+    //descripción del texto desplazable
     final bottomContent = Container(
       height: 280.0,
       child: SingleChildScrollView(
