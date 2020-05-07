@@ -139,10 +139,18 @@ class pp extends StatelessWidget {
     final path = settings.name.split('/');
     final title = path[1];
 
+    // Enrutamiento para Documentos o Materiales
     Documents document = documents.firstWhere((it) => it.title == title);
     return MaterialPageRoute(
       settings: settings,
       builder: (context) => DetailDocuments(document),
+    
+    //Enrutamiento para libros
+    
+     /*Book book = books.firstWhere((it) => it.title == title);
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (context) => Detail(book),*/
       
     );
   }
