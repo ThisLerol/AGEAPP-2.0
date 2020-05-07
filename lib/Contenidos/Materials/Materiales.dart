@@ -1,25 +1,27 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:ageapp/Contenidos/Books/data_book.dart';
+import 'package:ageapp/Contenidos/Materials/data_material.dart';
 
-class Biblioteca extends StatelessWidget {
+
+class Materiales extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {    
+  Widget build(BuildContext context) {
+ 
  ///crear  mosaico de libros Hero
-    createTile(Book book) => Hero(
-          tag: book.title,
+    createTile(Documents documento) => Hero(
+          tag: documento.title,
           child: Material(
             borderRadius: BorderRadius.all(Radius.circular(10.0)),
             elevation: 15.0,
             shadowColor: Color(0XFF9E9E9E),
             child: InkWell(
               onTap: () {
-                Navigator.pushNamed(context, 'detail/${book.title}');            
+                Navigator.pushNamed(context, 'detail/${documento.title}');            
               },
               child: ClipRRect(
                 borderRadius: BorderRadius.all(Radius.circular(10.0)),
                 child: Image(
-                  image: AssetImage(book.image),
+                  image: AssetImage(documento.image),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -38,7 +40,7 @@ class Biblioteca extends StatelessWidget {
             crossAxisCount: 3,
             mainAxisSpacing: 20.0,
             crossAxisSpacing: 20.0,
-            children: books.map((book) => createTile(book)).toList(),
+            children: documents.map((documento) => createTile(documento)).toList(),
           ),
         )
       ],
@@ -152,7 +154,7 @@ class DataSearch extends SearchDelegate<String>{
 
     return ListView.builder(
       itemBuilder: (context,index) => ListTile(
-        leading: Icon(Icons.book),
+        leading: Icon(Icons.library_books),
         title:RichText(
           text:TextSpan(
             text:suggestionList[index].substring(0,query.length),
@@ -174,5 +176,3 @@ class DataSearch extends SearchDelegate<String>{
   }
  
 }  
-
-
