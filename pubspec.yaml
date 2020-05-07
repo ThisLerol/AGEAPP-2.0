@@ -131,7 +131,7 @@ flutter:
     - img_books/la-chispa-y-la-llama.jpg
     - img_books/tiempo-de-mision.jpg
 
-#la sangribooks/a papaaaaaaaaaa
+  #la sangribooks/a papaaaaaaaaaa
     - assets/fotorobin.jpg
     - assets/fotoaracely.jpg
     - assets/fotojuank.jpg
@@ -142,7 +142,7 @@ flutter:
     - assets/RO.jpg
     - assets/RS.jpg
     - assets/mapa.jpg
-    # fotos de regiones
+  # fotos de regiones
     - assets/fotovu.jpg
     - assets/costacentro2.jpg
     - assets/fondocentrooriente.jpg
@@ -153,7 +153,7 @@ flutter:
     - assets/oriente2.jpg
     - assets/fondosur.jpg
     - assets/sur2.jpg
-#la sangria papaaaaaaaaaa
+  #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
       fonts:
