@@ -138,6 +138,7 @@ class pp extends StatelessWidget {
     return MaterialPageRoute(
       settings: settings,
       builder: (context) => Detail(book),
+    
       
     );
   }
