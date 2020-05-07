@@ -34,17 +34,7 @@ class Regiones extends StatelessWidget {
               Container(
                 color: Colors.white,
                 //color: Colors.grey[300],
-                child: Container(
-                  padding: EdgeInsets.all(15.0),
-                  child: Text("La Asociación de Grupos Evangélicos Universitario del Perú esta distribuida en 5 regiones, esto para una mejor incidencia misionera en las universidades debido al desafio geográfico que nos brinda nuestro pais. Por otra parte, de esta forma se brindan a los grupos afiliados y fraternos facilidades administrativas y pastorales, de esta forma cada region cuenta con una junta directiva regional estudiantil y un acompañamiento formativo y pastoral por medio de los directores regionales.",
-                    style: TextStyle(
-                      fontSize: 17.0,
-                      fontStyle: FontStyle.italic,
-                      color: Colors.blueGrey[900],
-                    ),
-                    textAlign: TextAlign.justify,
-                  ),
-                ),
+                child: _Descripcion()
               ),
               ],
             ),
@@ -180,6 +170,29 @@ class _Regiones extends StatelessWidget{
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+}
+
+class _Descripcion extends StatelessWidget{
+
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(15.0),
+      child: ListView(
+        scrollDirection: Axis.vertical,
+        children: <Widget>[
+        Text(
+          "La Asociación de Grupos Evangélicos Universitario del Perú esta distribuida en 5 regiones, esto para una mejor incidencia misionera en las universidades debido al desafio geográfico que nos brinda nuestro pais. Por otra parte, de esta forma se brindan a los grupos afiliados y fraternos facilidades administrativas y pastorales, de esta forma cada region cuenta con una junta directiva regional estudiantil y un acompañamiento formativo y pastoral por medio de los directores regionales.",
+          style: TextStyle(
+            fontSize: 17.0,
+            fontStyle: FontStyle.italic,
+            color: Colors.blueGrey[900],
+          ),
+          textAlign: TextAlign.justify,
+        ),
         ],
       ),
     );
