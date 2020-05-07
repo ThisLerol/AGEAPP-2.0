@@ -33,6 +33,7 @@ class Mas extends StatelessWidget {
                               SliverPadding(
                                 padding: const EdgeInsets.all(10),
                                 sliver: SliverGrid.count(
+                                  childAspectRatio: 2 / 2.3,
                                   crossAxisSpacing: 10,
                                   mainAxisSpacing: 10,
                                   crossAxisCount: 3,
@@ -49,9 +50,6 @@ class Mas extends StatelessWidget {
                                         child: Center(
                                           child: Column(
                                             children: <Widget>[
-                                             Container(
-                                               child:Column(
-                                                children: <Widget>[
                                                 Container(
                                                   child: Icon(Icons.find_in_page, size: ((MediaQuery.of(context).size.width - 40) /6) ,/*color: Colors.redAccent,*/),
                                                   padding: EdgeInsets.all(5.0),
@@ -60,13 +58,10 @@ class Mas extends StatelessWidget {
                                                   padding: EdgeInsets.all(5),
                                                   child: Text(
                                                     "Regiones", style: TextStyle(
-                                                    fontSize: ((MediaQuery.of(context).size.width - 40) /16),
+                                                    fontSize: 20.0,
                                                     fontStyle: FontStyle.italic,
                                                   ),),
                                                 ),
-                                              ]
-                                              )
-                                              ),
                                             ],
                                           ),
                                         ),
@@ -95,7 +90,7 @@ class Mas extends StatelessWidget {
                                                         Container(
                                                           child: Text(
                                                             "Contactos", style: TextStyle(
-                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
+                                                            fontSize: 20.0,
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
@@ -130,7 +125,7 @@ class Mas extends StatelessWidget {
                                                           padding: EdgeInsets.all(0),
                                                           child: Text(
                                                             "Más info", style: TextStyle(
-                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
+                                                            fontSize: 20.0,
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
@@ -166,7 +161,7 @@ class Mas extends StatelessWidget {
                                                           padding: EdgeInsets.all(0),
                                                           child: Text(
                                                             "Juego", style: TextStyle(
-                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
+                                                            fontSize: 20.0,
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
