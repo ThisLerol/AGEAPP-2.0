@@ -82,14 +82,24 @@ flutter:
     - assets/fotorobin.jpg
     - assets/fotoaracely.jpg
     - assets/fotojuank.jpg
-    - assets/fotovu.jpg
     - assets/fotojdn.jpg
-    - assets/mapa.png
     - assets/RCC.jpg
     - assets/RN.jpg
     - assets/RCO.jpg
     - assets/RO.jpg
     - assets/RS.jpg
+    - assets/mapa.jpg
+    # fotos de regiones
+    - assets/fotovu.jpg
+    - assets/costacentro2.jpg
+    - assets/fondocentrooriente.jpg
+    - assets/centrooriente2.jpg
+    - assets/fondonorte.jpg
+    - assets/norte2.jpg
+    - assets/fondooriente.jpg
+    - assets/oriente2.jpg
+    - assets/fondosur.jpg
+    - assets/sur2.jpg
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia

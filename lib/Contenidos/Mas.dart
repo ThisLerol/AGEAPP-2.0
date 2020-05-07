@@ -52,14 +52,14 @@ class Mas extends StatelessWidget {
                                                child:Column(
                                                 children: <Widget>[
                                                 Container(
-                                                  child: Icon(Icons.find_in_page, size: 50.0,/*color: Colors.redAccent,*/),
+                                                  child: Icon(Icons.find_in_page, size: ((MediaQuery.of(context).size.width - 40) /6) ,/*color: Colors.redAccent,*/),
                                                   padding: EdgeInsets.all(5.0),
                                                 ),
                                                 Container(
                                                   padding: EdgeInsets.all(5),
                                                   child: Text(
                                                     "Regiones", style: TextStyle(
-                                                    fontSize: 20.0,
+                                                    fontSize: ((MediaQuery.of(context).size.width - 40) /16),
                                                     fontStyle: FontStyle.italic,
                                                   ),),
                                                 ),
@@ -88,13 +88,13 @@ class Mas extends StatelessWidget {
                                                   child:Column(
                                                       children: <Widget>[
                                                         Container(
-                                                          child: Icon(Icons.contacts, size: 45.0,/*color: Colors.redAccent,*/),
+                                                          child: Icon(Icons.contacts, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
                                                           padding: EdgeInsets.all(10.0),
                                                         ),
                                                         Container(
                                                           child: Text(
                                                             "Contactos", style: TextStyle(
-                                                            fontSize: 20.0,
+                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
@@ -122,14 +122,14 @@ class Mas extends StatelessWidget {
                                                   child:Column(
                                                       children: <Widget>[
                                                         Container(
-                                                          child: Icon(Icons.info, size: 45.0,/*color: Colors.redAccent,*/),
+                                                          child: Icon(Icons.info, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
                                                           padding: EdgeInsets.all(10.0),
                                                         ),
                                                         Container(
                                                           padding: EdgeInsets.all(0),
                                                           child: Text(
                                                             "Más info", style: TextStyle(
-                                                            fontSize: 20.0,
+                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
@@ -158,14 +158,14 @@ class Mas extends StatelessWidget {
                                                       mainAxisAlignment: MainAxisAlignment.center,
                                                       children: <Widget>[
                                                         Container(
-                                                          child: Icon(Icons.videogame_asset, size: 45.0,/*color: Colors.redAccent,*/),
+                                                          child: Icon(Icons.videogame_asset, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
                                                           padding: EdgeInsets.all(10.0),
                                                         ),
                                                         Container(
                                                           padding: EdgeInsets.all(0),
                                                           child: Text(
                                                             "Juego", style: TextStyle(
-                                                            fontSize: 20.0,
+                                                            fontSize: ((MediaQuery.of(context).size.width - 40) /16),
                                                             fontStyle: FontStyle.italic,
                                                           ),),
                                                         ),
