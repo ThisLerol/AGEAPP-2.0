@@ -65,39 +65,7 @@ class Biblioteca extends StatelessWidget {
 
 class DataSearch extends SearchDelegate<String>{
  
-
- final libros = [
-   "Creer es tambien pensar",
-   "identidad evangelica",
-   "Se hizo hombre",
-   "¿Que es la mision integral?",
-   "Bases biblicas de La Mision",
-   "El evangelio hoy",
-   "Evangelizar hoy",
-   "La chispa y la llama",
-   "Tiempo de misión",
-   "Identidad Evangelica",
-   "El cristiano contemporaneo",
-   "Cristianismo básico",
-   "Creer es tambien pensar",
-   "Asi leo la biblia",
-   "El sentido de la vida",
-   "El progreso del peregrino Ilustrado",
-  "Cristianismo y ciencia",
-   "La edad de la tecnica",
-   "Dinero y poder",
-   "La mujer en el cristianismo",
-   "El principio de todas las cosas Ciencia y Religion",
-   "El cristianismo Esencia e historia"];
-
-   final recentCities = [
-   "Cristianismo y ciencia",
-   "La edad de la tecnica",
-   "Dinero y poder",
-   "La mujer en el cristianismo",
-   "El principio de todas las cosas Ciencia y Religion",
-   "El cristianismo Esencia e historia",
-   ]; 
+ final libros = books.map((book) => ('${book.title}')).toList();
 
   @override
   List<Widget> buildActions(BuildContext context) {
@@ -147,17 +115,17 @@ class DataSearch extends SearchDelegate<String>{
   Widget buildSuggestions(BuildContext context) {
     // Mostrar cuando alguien busca algo
       
-   final suggestionList  = query.isEmpty ? libros 
-    :libros.where((p)=>p.startsWith(query)).toList(); 
+   final   suggestionList  = query.isEmpty ? libros 
+    :libros.where((p)=>p.contains(query)).toList(); 
 
     return ListView.builder(
       itemBuilder: (context,index) => ListTile(
         leading: Icon(Icons.book),
         title:RichText(
           text:TextSpan(
-            text:suggestionList[index].substring(0,query.length),
+            text:suggestionList[index].substring(0,query.length), 
             style: TextStyle(
-              color:Colors.blue, fontWeight: FontWeight.bold),
+              color:Colors.black, fontWeight: FontWeight.bold),
               children: [
                 TextSpan(
                   text:suggestionList[index].substring(query.length),
@@ -165,7 +133,7 @@ class DataSearch extends SearchDelegate<String>{
               ]),
               ),
             onTap: (){
-
+                Navigator.pushNamed(context, 'detail/${suggestionList[index]}');
             },
             ), 
           
@@ -174,5 +142,7 @@ class DataSearch extends SearchDelegate<String>{
   }
  
 }  
+
+
 
 

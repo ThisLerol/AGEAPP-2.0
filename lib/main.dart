@@ -132,32 +132,38 @@ class pp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
 
       home:AllBar(),
-      onGenerateRoute: (settings) => generateRoute(settings),
+      onGenerateRoute: (settings) => RouteBook.generarRutas(settings,documents,books),
     );  
   }
-    generateRoute(RouteSettings settings) {
+   
+}
+
+class  RouteBook {
+  
+  static Route<dynamic> generarRutas(RouteSettings settings, List<Documents> documentos, List<Book> books){
     final path = settings.name.split('/');
     final title = path[1];
-
-    // Enrutamiento para Documentos o Materiales
-    Documents document = documents.firstWhere((it) => it.title == title);
-    return MaterialPageRoute(
-      settings: settings,
-      builder: (context) => DetailDocuments(document),
-    
-    //Enrutamiento para libros
-    
-    /*Book book = books.firstWhere((it) => it.title == title);
-    return MaterialPageRoute(
-      settings: settings,
-      builder: (context) => Detail(book),*/
-
-
+    MaterialPageRoute pageroute;
+    documentos.forEach((doc) => {
       
-    );
+      if(doc.title == title){
+        pageroute = MaterialPageRoute(
+          settings: settings,
+          builder: (context) => DetailDocuments(doc)
+        )
+      }
+    });
+    books.forEach((book)=>{
+      if (book.title == title) {
+        pageroute = MaterialPageRoute(
+          settings: settings,
+          builder: (context) => Detail(book),
+        )
+      }
+    });
+    return pageroute;
+    
   }
-  
-
-
-  
 }
+  
+

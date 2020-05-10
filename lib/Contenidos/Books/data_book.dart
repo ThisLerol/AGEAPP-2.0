@@ -13,7 +13,7 @@ class Book {
 }
 
 final List<Book> books = [
-  Book('El Estudio biblico creativo', 'Ada Lum & Ruth Siemens',
+  Book('El estudio biblico creativo', 'Ada Lum & Ruth Siemens',
       'Año: 1977', 'img_documents/estudio-biblico-creativo.jpg', 3, 227,'https://drive.google.com/file/d/1Wr5CbeVwAon0wgj1pn0_K_aMWenfp2AR/view?usp=sharing',
       'EL ESTUDIO BIBLICO CREATIVO es un manual elaborado para quienes quieren capacitar a otros en lo que atañe al estudio bíblico básico y a los grupos de discusión o encuentros bíblicos -una manera revolucionaria de encarar el estudio de la Biblia. Su mayor ventaja, y, con toda seguridad, lo que hace diferente de muchos otros intentos en el campo de la capacitación, radica en la funcionalidad de sus conocimientos como en la honestidad de su propósito (no producir automáticamente expertos bíblicos si no despertar los dones de Dios). Esta obra, escrita por dos autoras ampliamente conocidas por su erudición y experiencia, forma parte de la serie ENCUENTROS BIBLICOS, de la cual pasa a construir ahora su libro base.'),
   Book('La paz del perdon', 'Charles Stanley',
