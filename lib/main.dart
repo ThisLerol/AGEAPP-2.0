@@ -3,14 +3,19 @@ import 'package:ageapp/barMenu.dart';
 import 'dart:async';
 import 'package:ageapp/Contenidos/Books/data_book.dart';
 import 'package:ageapp/Contenidos/Books/detail_book.dart';
+import 'package:ageapp/Contenidos/Materials/data_material.dart';
+import 'package:ageapp/Contenidos/Materials/detail_material.dart';
 
 
 
 void main(){
   runApp(new MaterialApp(
     home: SplashScrean(),
-
-  ));
+    
+  ),
+  
+  );
+  
 }
 
 class SplashScrean extends StatefulWidget{
@@ -134,12 +139,25 @@ class pp extends StatelessWidget {
     final path = settings.name.split('/');
     final title = path[1];
 
-    Book book = books.firstWhere((it) => it.title == title);
+    // Enrutamiento para Documentos o Materiales
+    Documents document = documents.firstWhere((it) => it.title == title);
     return MaterialPageRoute(
       settings: settings,
-      builder: (context) => Detail(book),
+      builder: (context) => DetailDocuments(document),
+    
+    //Enrutamiento para libros
+    
+    /*Book book = books.firstWhere((it) => it.title == title);
+    return MaterialPageRoute(
+      settings: settings,
+      builder: (context) => Detail(book),*/
+
+
       
     );
   }
+  
+
+
   
 }
