@@ -130,7 +130,7 @@ class Home extends StatelessWidget {
                                 fontSize: 30.0,
                                 fontStyle: FontStyle.italic,
                               ),
-                              textAlign: TextAlign.justify,
+                              textAlign: TextAlign.center,
                             ),
                             content: SingleChildScrollView(
                               child: ListBody(
@@ -213,18 +213,18 @@ class Home extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             title: Text(
-                              "¿Qué es CBU?",
+                              "¿Qué es AGEAPP?",
                               style: TextStyle(
                                 fontSize: 30.0,
                                 fontStyle: FontStyle.italic,
                               ),
-                              textAlign: TextAlign.justify,
+                              textAlign: TextAlign.center,
                             ),
                             content: SingleChildScrollView(
                               child: ListBody(
                                 children: <Widget>[
                                   Text(
-                                    "La Comunidad Bíblica Universitaria está conformada por estudiantes universitarios evangélicos cuya misión es compartir el evangelio de Jesucristo en palabras y actos, es decir compartiendo las buenas noticias del Reino con todos los estamentos de la universidad, de manera que puedan satisfacer las necesidades fundamentales de las personas, en todas sus dimensiones, física, afectiva, psicológica, espiritual, intelectual, etc. En este sentido, la CBU, no es una iglesia, al contrario, es una extensión de la misma, o como se la llama tradicionalmente, “somos el brazo misionero de la iglesia”. Por tal razón, la iglesia local y la CBU trabajan cooperativamente. Por ello también cada miembro de la CBU forma parte de una iglesia local.",
+                                    "Aplicación para la Asociación de Grupos Evangélicos Universitarios del Perú (AGEAPP) desarrollado por estudiantes miembros de AGEUP. Esta aplicación, tiene el propósito de ofrecer información sistematizada, con el fin de impulsar el aprendizaje y formación de los estudiantes en la palabra de DIOS, de manera que cada estudiante aporte en su entorno eclesial y social;  por ello se recopiló diversos libros y materiales de estudio, y se añadió un cancionero de los temás que le dan identidad a nuestro movimiento. AGEAPP espera ser de ayuda a la comunidad, haciendo vivir a los estudiantes para el servicio de los otros con respecto a la misión integral.",
                                     style: TextStyle(
                                       fontSize: 15.0,
                                       fontStyle: FontStyle.italic,
