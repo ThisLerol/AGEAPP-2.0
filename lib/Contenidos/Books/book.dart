@@ -67,6 +67,8 @@ class DataSearch extends SearchDelegate<String>{
  
  final libros = books.map((book) => ('${book.title}')).toList();
 
+
+
   @override
   List<Widget> buildActions(BuildContext context) {
     // Acciones para la barra de aplicaciones (AppBar)
@@ -115,10 +117,12 @@ class DataSearch extends SearchDelegate<String>{
   Widget buildSuggestions(BuildContext context) {
     // Mostrar cuando alguien busca algo
       
-   final   suggestionList  = query.isEmpty ? libros 
-    :libros.where((p)=>p.contains(query)).toList(); 
+  
+     final suggestionList = query.isEmpty ? libros 
+    :libros.where((a)=> a.toLowerCase().contains(query.toLowerCase())).toList(); 
 
-    return ListView.builder(
+     
+      return ListView.builder(
       itemBuilder: (context,index) => ListTile(
         leading: Icon(Icons.book),
         title:RichText(
@@ -142,6 +146,10 @@ class DataSearch extends SearchDelegate<String>{
   }
  
 }  
+
+
+
+ 
 
 
 
