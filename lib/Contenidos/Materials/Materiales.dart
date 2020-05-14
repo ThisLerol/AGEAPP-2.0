@@ -118,8 +118,8 @@ class DataSearch extends SearchDelegate<String>{
   Widget buildSuggestions(BuildContext context) {
     // Mostrar cuando alguien busca algo
       
-   final suggestionList  = query.isEmpty ? documentos 
-    :documentos.where((p)=>p.contains(query)).toList(); 
+    final suggestionList = query.isEmpty ? documentos 
+    :documentos.where((a)=> a.toLowerCase().contains(query.toLowerCase())).toList();
 
     return ListView.builder(
       itemBuilder: (context,index) => ListTile(

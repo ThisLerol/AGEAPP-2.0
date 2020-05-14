@@ -194,6 +194,11 @@ flutter:
     - assets/fotomisael.jpg
     - assets/fotoaracely.jpg
     - assets/fotojhoss.jpg
+    # imagenes para el juego
+    - assets/images/cross.png
+    - assets/images/circle.png
+    - assets/images/edit.png
+
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
