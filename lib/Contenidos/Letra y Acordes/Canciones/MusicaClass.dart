@@ -5,6 +5,8 @@ class MusicaClass {
    var nombres = List(25);
    var letras = List(25);
    var acordes = List(25);
+   var autores = List(25);
+   var drive = List(25);
 
 
 
@@ -27,13 +29,13 @@ class MusicaClass {
     nombres[15]= "Piedras vivas";
     nombres[16]= "Salmo 8";
     nombres[17]= "HAKUNA MUNGU KAMA WEWE";
-    nombres[18]= "Sencilla";
+    nombres[18]= "Sencilla ";
     nombres[19]= "Xote da victoria";
     nombres[20]= "La semilla ";
     nombres[21]= "Salmo 19 ";
     nombres[22]= "Quién sino tú ";
     nombres[23]= "El sancocho";
-    nombres[24]= "25.Con alegría";
+    nombres[24]= "Con alegría";
   }
   void runAcordes(tono){
     acordes[0] = "Jesús, Dios nuestro,\n   "+convert(tono)+"     "+convert(tono-5)+"          .\nSeñor nadie es como tú.\n"+convert(tono-3)+"-    "+convert(tono-5)+"     "+convert(tono-7)+"\nDesde aquí decimos hoy:\n"+convert(tono-8)+"-  "+convert(tono-3)+"-  "+convert(tono-8)+"-   "+convert(tono-3)+"-\nCuan grande es tu poder y amor.\n"+convert(tono-2)+"        "+convert(tono-5)+"\n\nConsuelo, refugio,\n"+convert(tono)+"     "+convert(tono-5)+"     .\nAmas justicia y verdad.\n"+convert(tono-3)+"-    "+convert(tono-5)+"     "+convert(tono-7)+"\nLa creación, tu pueblo aquí,\n"+convert(tono-8)+"-  "+convert(tono-3)+"-  "+convert(tono-8)+"-   "+convert(tono-3)+"-\nCelebramos en tu honor.\n"+convert(tono-2)+"        "+convert(tono-5)+"\n\nCoro:\nPara el Señor canta toda la tierra,\n"+convert(tono)+"      "+convert(tono-3)+"-       "+convert(tono+2)+"-        "+convert(tono-5)+"\nLa majestad y el poder suyos son.\n"+convert(tono)+"      "+convert(tono-3)+"-       "+convert(tono+2)+"-        "+convert(tono-5)+"\nTiemblan los montes, los mares se\n"+convert(tono)+"           "+convert(tono-3)+"-          "+convert(tono+2)+"-\nEncrespan al sonido de su voz.\n"+convert(tono+7)+"              "+convert(tono-5)+"\nVen celebremos sus obras, sus hechos;\nLA     FA# -        SI-          MI\nPermanecemos, pues él vive hoy.\nLA     FA# -    SI-     MI\nNuestra esperanza descansa en nuestro Dios.\nLA        FA# -     SI-         MI      LA";
@@ -94,6 +96,61 @@ class MusicaClass {
 
   }
 
+  void runAutores(){
+     autores[0]= "Viene tu pueblo a alabar";
+     autores[1]= "El himno de la liberación";
+     autores[2]= "Busca la paz de tu Dios";
+     autores[3]= "No por honra";
+     autores[4]= "Danza mi país";
+     autores[5]= "Para el Señor canta toda la tierra";
+     autores[6]= "Yo soy un militante";
+     autores[7]= "Canto de los líderes";
+     autores[8]= "La unidad";
+     autores[9]= "Isaías 33:14-16";
+     autores[10]= "Tenemos esperanza";
+     autores[11]= "Ayúdame a mirar con tus ojos";
+     autores[12]= "Señor cuando tú me llames";
+     autores[13]= "Escudriñemos nuestros caminos";
+     autores[14]= "Debemos decir y hacer la verdad";
+     autores[15]= "Piedras vivas";
+     autores[16]= "Salmo 8";
+     autores[17]= "HAKUNA MUNGU KAMA WEWE";
+     autores[18]= "Sencilla ";
+     autores[19]= "Xote da victoria";
+     autores[20]= "La semilla ";
+     autores[21]= "Salmo 19 ";
+     autores[22]= "Quién sino tú ";
+     autores[23]= "El sancocho";
+     autores[24]= "Con alegría";
+   }
+
+   void LinksDrive(){
+     drive[0]= '-';
+     drive[1]= 'https://drive.google.com/open?id=1GBI_g8MRI-T9VxAa4N8ktwwo8SGI64Zt';
+     drive[2]= 'https://drive.google.com/open?id=1LDYAOFF5An8Y02swILxNYCDFga3aiyHR';
+     drive[3]= 'https://drive.google.com/open?id=1Rhpwuw6YWVGMZFA4ksocOSpUJS4T4sys';
+     drive[4]= 'https://drive.google.com/open?id=1vX_kk_Xi3BGzM6kNanfiOLgxxQH-m9at';
+     drive[5]= '-';
+     drive[6]= 'https://drive.google.com/open?id=1eaZy-rIi_U2cXKT1ndNv6EY-6IeOuD8A';
+     drive[7]= 'https://drive.google.com/open?id=1usXK_etkyBKGLDrJlXjrmoP4axjCaDlM';
+     drive[8]= 'https://drive.google.com/open?id=1KIMnz_pOQ41ZLeN_PRIezuJ67VTEvX2O';
+     drive[9]= 'https://drive.google.com/open?id=1fiyzhdPCvQ6QopEIF0k2AQR_T-GD9yat';
+     drive[10]= 'https://drive.google.com/open?id=1SChUWEl1AFMPqUlwQUCZDFuJMC1y-wkL';
+     drive[11]= 'https://drive.google.com/open?id=1rtgX64VzC-neNDssmDyPQ3CHh4-fkISs';
+     drive[12]= 'https://drive.google.com/open?id=17Pij07ZQRzJhblOc75Y8l1P8vL20Lbvu';
+     drive[13]= 'https://drive.google.com/open?id=1JrPIwzp3Ssmq2Z_qGwN2SzOrGcYFUK2N';
+     drive[14]= 'https://drive.google.com/open?id=1lA9UC8x7zYnvJNMsPsDTp3pMzNBq_T3G';
+     drive[15]= '-';
+     drive[16]= 'https://drive.google.com/open?id=1YgvelAz8siQfb4eTXsI1w4O1U8-Z_OSY';
+     drive[17]= 'https://drive.google.com/open?id=1Q1dZbbgXivLdu1wbtZPjqvEga5UnwwW6';
+     drive[18]= 'https://drive.google.com/open?id=1RBcOaY3PMzAhU_URIknc9Q6UVp_7I5nr';
+     drive[19]= '-';
+     drive[20]= '-';
+     drive[21]= 'https://drive.google.com/open?id=1DRWlr99L8Sjpn3ac2ZHNXaPF6M6Hd0BC';
+     drive[22]= 'https://drive.google.com/open?id=1Xvo3wAheNq9rAyFbtgQuI8yFjCap36Wj';
+     drive[23]= 'https://drive.google.com/open?id=1XueO49mSLphYa6FvOT3jj40NmPS1DS0S';
+     drive[24]= '-';
+   }
   String getnombre(int i){
     runNombres();
     return nombres[i];
@@ -106,7 +163,24 @@ class MusicaClass {
      runAcordes(tono);
      return acordes[i];
    }
+   String getAutores(int i){
+     runAutores();
+     return autores[i];
+   }
 
+   String getLinksDrive(int i){
+     LinksDrive();
+     return drive[i];
+   }
+
+   List getnombreList(){
+     runNombres();
+      return nombres;
+   }
+   int getnombreListancho(){
+     runNombres();
+     return nombres.length;
+   }
 
    String convert(int not) {
      switch(not) {

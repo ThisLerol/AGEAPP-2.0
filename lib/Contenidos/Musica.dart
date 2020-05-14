@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/ChordMain.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
 import 'package:ageapp/Contenidos/Letra y Acordes/Buscar.dart';
-
+import 'package:flutter/services.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Musica extends StatefulWidget{
   @override
@@ -15,31 +16,60 @@ class Musica extends StatefulWidget{
 }
 
 class _Musica extends State<Musica>{
+  List<String> test, sample, _dat1;
+
+  String texto = " ";
   MusicaClass musicaData = new MusicaClass();
+
   var controller = 0;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.search),
-        onPressed: (){
-          showSearch(context:context, delegate:Buscar());
-        },
-      ),
-       // color: Colors.red[50],
 
-        body: ListView(
-          children:
-          ListaCanciones(),
-        )
+      // color: Colors.red[50],
+
+      body:
+
+      ListView(
+
+        children:
+        //ListaCanciones(),
+        CancionesBuscadas(texto),
+      ),
+
+
+
     );
   }
 
-  List<Widget> ListaCanciones(){
-    int ai = 24;
+  List<Widget> CancionesBuscadas(String text){
+    var nombresBus = <String>[];
+    var nombresIndex = <int>[];
 
+    int cont = 0;
+    print("ancho");
+    print(musicaData.getnombreListancho());
+    for( var i = 0 ; i <= musicaData.getnombreListancho()-1; i++ ) {
+      if(musicaData.getnombre(i).toLowerCase().contains(text.toLowerCase())){
+        nombresBus.add(musicaData.getnombre(i));
+        nombresIndex.add(i);
+        cont++;
+        print("cont");
+        print(cont);
+
+      }
+
+    }
+
+    var arr = new List<Widget>(cont+1);
+    print("nombresBus");
+    print(nombresBus);
+    print(nombresBus.length);
+    print("nombresIndex");
+    print(nombresIndex);
+    print(nombresIndex.length);
     Color InterCalar(int i){
       if(i%2==0){
         return Colors.white;
@@ -47,13 +77,19 @@ class _Musica extends State<Musica>{
         return Colors.red[50];
       }
     }
+    print("cont");
+    print(cont);
+    print("arr lenght");
+    print(arr.length);
+    var a = 0;
 
-    var arr = new List<Widget>(ai+1);
+    for( var i = 1 ; i <= cont; i++ ){
+      print('var a');
+      print(a);
+      print(nombresIndex.length);
 
-    for( var i = 0 ; i <= ai; i++ ) {
-      var a = i+1;
 
-      arr[i] = Container(
+      arr[i]= Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: InterCalar(i),
@@ -61,74 +97,104 @@ class _Musica extends State<Musica>{
             BoxShadow(color: Colors.red[50], spreadRadius: 0),
           ],
         ),
-       // color: InterCalar(i),
-        //elevation: 0,
-        //borderOnForeground: true,
-        child: InkWell(
-            child: Wrap(
-              direction: Axis.horizontal,
-              alignment: WrapAlignment.spaceBetween,
-              crossAxisAlignment: WrapCrossAlignment.center,
-              children: <Widget>[
-                  Wrap(
-                    crossAxisAlignment: WrapCrossAlignment.center,
-                    alignment: WrapAlignment.end,
-                    children: <Widget>[
-                      Padding(
-                        padding:  EdgeInsets.fromLTRB(8, 0, 0, 0),
-                        child: InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
-                            );},
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children:<Widget>[
-                              Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$a. "+musicaData.getnombre(i),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
-                              Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
-                            ]
-                          ),
-                        ),
-                      ),
-                        Container(
-                        width: 0,
-                        height: 60,
-                      ),
-                    ],
-                  ),
-                Wrap(
-                  alignment: WrapAlignment.spaceAround,
-                    children: <Widget>[
-                      InkWell(
-                        splashColor: Colors.red.withAlpha(30),
-                        onTap: () {
-                        Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
-                        );},
-                        child: Padding(
-                          padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
-                          child: Icon(CupertinoIcons.double_music_note,size: 25,),
-                        ),
-                      ),
-                      Padding(
 
-                        padding:  EdgeInsets.fromLTRB(0, 0, 5, 0),
-                        child: Icon(CupertinoIcons.play_arrow_solid,size: 25,),
+        child: Wrap(
+            alignment: WrapAlignment.spaceBetween,
+            crossAxisAlignment: WrapCrossAlignment.center,
+            direction: Axis.horizontal,
+            children: <Widget>[
+              InkWell(
+                  child: Wrap(
+                    direction: Axis.horizontal,
+                    alignment: WrapAlignment.spaceEvenly,
+                    crossAxisAlignment: WrapCrossAlignment.center,
+                    children: <Widget>[
+                      Wrap(
+                        crossAxisAlignment: WrapCrossAlignment.center,
+                        alignment: WrapAlignment.end,
+                        children: <Widget>[
+                          Padding(
+                            padding:  EdgeInsets.fromLTRB(8, 0, 0, 0),
+                            child: InkWell(
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
+                                );},
+                              child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children:<Widget>[
+                                    //Text(musicaData.getLinksDrive(nombresIndex[a]).toString()),
+                                    Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$i. "+nombresBus[i-1].toString(),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
+                                    Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
+                                  ]
+                              ),
+                            ),
+                          ),
+                          Container(
+                            width: 0,
+                            height: 60,
+                          ),
+                        ],
                       ),
-                      Padding(
-                        padding:  EdgeInsets.fromLTRB(0, 0, 7, 0),
-                        child: Icon(Icons.file_download ,size: 25,),
-                      ),
+
                     ],
                   )
-                ],
-              )
-        ),
+              ),
+              Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+
+                    onPressed: (){
+                      if(musicaData.getLinksDrive(nombresIndex[i-1])=="-"){
+                      }else{
+                        launch(musicaData.getLinksDrive(nombresIndex[i-1]).toString());
+                      }
+                    },
+                    color: InterCalar(i),
+                    elevation: 0,
+
+                    child: Icon(Icons.play_arrow),
+                  )
+              ),
+            ]),
       );
+      a++;
     }
+
+    arr[0]=Container(
+      width: 300,
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      height: 50,
+      decoration: BoxDecoration(
+          color: Colors.white70,
+          borderRadius: BorderRadius.only(
+              bottomRight: Radius.circular(15.0),
+              bottomLeft: Radius.circular(15.0),
+              topLeft: Radius.circular(15.0),
+              topRight: Radius.circular(15.0))),
+      child: TextField(
+        style: new TextStyle(color: Colors.white),
+        decoration: InputDecoration(
+          contentPadding: EdgeInsets.only(top: 15.0),
+          border: InputBorder.none,
+          hintText: 'Buscar...',
+          hintStyle: TextStyle(color: Colors.grey, fontSize: 12.0),
+          labelStyle: TextStyle(color: Colors.white),
+          prefixIcon: Icon(Icons.search, color: Colors.grey),
+        ),
+        onChanged: (String text) {
+          setState(() {
+            print(text);
+            texto = text;
+            CancionesBuscadas(texto);
+          });
+        },
+      ),
+    );
+
 
     return arr;
   }
+
 }

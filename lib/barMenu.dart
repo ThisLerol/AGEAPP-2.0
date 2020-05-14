@@ -55,7 +55,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
     return new Scaffold(
       appBar: new AppBar(
         actions: <Widget>[
-          Padding(child: InkWell(child:Icon(SocialMedia.facebook_squared,size: 18, ),onTap: () => launch('https://www.facebook.com/ageup.ifes'),),padding: EdgeInsets.all(5.0),),
+          Padding(child: InkWell(child:Icon(SocialMedia.facebook_squared,size: 18, ),onTap: () => launch('https://www.fb.com/ageup.ifes'),),padding: EdgeInsets.all(5.0),),
           Padding(child: InkWell(child:Icon(SocialMedia.instagram,size: 18, ),onTap: () => launch('https://www.instagram.com/ageup.ifes/'),),padding: EdgeInsets.all(5.0),),
           Padding(child: InkWell(child:Icon(SocialMedia.youtube_play,size: 18, ),onTap: () => launch('https://www.youtube.com/channel/UCBmBKVnvpnw7rV7XBokcvZQ'),),padding: EdgeInsets.all(5.0),),
           Padding(padding: EdgeInsets.all(5.0),),
