@@ -30,6 +30,13 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_launcher_icons: "^0.7.3"
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/logo.jpg"
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -158,9 +165,6 @@ flutter:
     - img_documents/vivir-por-la-fe.jpg
     - img_documents/sufrimiento.jpg
 #la sangribooks/a papaaaaaaaaaa
-    - assets/fotorobin.jpg
-    - assets/fotoaracely.jpg
-    - assets/fotojuank.jpg
     - assets/fotojdn.jpg
     - assets/RCC.jpg
     - assets/RN.jpg
@@ -179,6 +183,17 @@ flutter:
     - assets/oriente2.jpg
     - assets/fondosur.jpg
     - assets/sur2.jpg
+    # fotos de contactos
+    - assets/fotorobin.jpg
+    - assets/fotojuank.jpg
+    - assets/fotodanny.jpg
+    - assets/fotobeula.jpg
+    - assets/fotocriss.jpg
+    - assets/fotoroberto.jpg
+    - assets/fotorut.jpg
+    - assets/fotomisael.jpg
+    - assets/fotoaracely.jpg
+    - assets/fotojhoss.jpg
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia

@@ -8,6 +8,8 @@ class Info extends StatelessWidget{
       appBar: AppBar(
         title: Text("Información adicional"),
       ),
+      body: Scaffold(
+      ),
     );
 
   }
