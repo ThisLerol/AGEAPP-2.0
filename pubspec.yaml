@@ -179,6 +179,10 @@ flutter:
     - assets/oriente2.jpg
     - assets/fondosur.jpg
     - assets/sur2.jpg
+    # imagenes para el juego
+    - assets/images/cross.png
+    - assets/images/circle.png
+    - assets/images/edit.png
 #la sangria papaaaaaaaaaa
   fonts:
     - family:  SocialMedia
