@@ -1,8 +1,23 @@
 import 'package:ageapp/Contenidos/Mas/TodasLasRegiones/RegionPorRegion.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-class Regiones extends StatelessWidget {
+class Regiones extends StatefulWidget {
+  @override
+  _RegionesState createState() => _RegionesState();
+}
+
+class _RegionesState extends State<Regiones> {
+
+  @override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,6 +59,17 @@ class Regiones extends StatelessWidget {
     );
   }
 
+
+  @override
+  dispose(){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    super.dispose();
+  }
 
 }
 

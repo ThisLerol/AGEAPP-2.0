@@ -1,12 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Materials/data_material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
 
+class DetailDocuments extends StatefulWidget {
+  final Documents documents1;
+  DetailDocuments(this.documents1);
+  @override
+  _DetailDocuments createState() => _DetailDocuments(documents1);
+}
 
-class DetailDocuments extends StatelessWidget {
+class _DetailDocuments extends State<DetailDocuments> {
   final Documents documents;
+  _DetailDocuments(this.documents);
 
-  DetailDocuments(this.documents);
+  @override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -136,6 +151,17 @@ class DetailDocuments extends StatelessWidget {
         throw 'No se pudo iniciar $url';
       }
     }
+
+  @override
+  dispose(){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    super.dispose();
+  }
 
 }
 
