@@ -58,7 +58,7 @@ class _Detail extends State<Detail> {
       ],
     );
 
-    ///detalle arriba a la derecha
+    //detalle arriba a la derecha
     final topRight = Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
@@ -107,7 +107,7 @@ class _Detail extends State<Detail> {
       ),
     );
 
-    ///descripción del texto desplazable
+    //descripción del texto desplazable
     final bottomContent = Container(
       height: 280.0,
       child: SingleChildScrollView(

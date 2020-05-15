@@ -50,7 +50,6 @@ class _SplashScrean extends State<SplashScrean>{
         }
       }
     );
-
   }
   @override
   Widget build(BuildContext context){
@@ -70,22 +69,20 @@ class _SplashScrean extends State<SplashScrean>{
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        CircleAvatar(
-                          backgroundColor: Color.fromRGBO(12, 12, 12, 2),
-                          radius: 2,
-                          child: Icon(
-                            Icons.add,//el icono va aqui
-                            color: Color.fromRGBO(39, 34, 34, 1),
-                            size: 50.0,
-
+                        Container(
+                          width: 200,
+                          height: 200,
+                          child: CircleAvatar(
+                            backgroundImage: AssetImage('assets/AGEUP.jpg'),
+                            backgroundColor: Colors.white,
+                            radius: 0,
                           ),
-
                         ),
                         Padding(
-                          padding: EdgeInsets.only(top: 10.0),
+                          padding: EdgeInsets.only(top: 10.0 ),
 
                         ),
-                        Text("FlutterAdd",style: TextStyle(color: Colors.redAccent,fontSize: 24.0,fontWeight: FontWeight.bold),)
+                        Text("Conectando con estudiantes",style: TextStyle(color: Colors.black,fontSize: 20.0,fontWeight: FontWeight.bold),)
                       ],
                     ),
 
@@ -96,26 +93,18 @@ class _SplashScrean extends State<SplashScrean>{
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-
-                      CircularProgressIndicator(),
+                      CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.red),),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("Nose que poner aqui",style: TextStyle(color: Colors.redAccent,fontSize: 18.0,fontWeight: FontWeight.bold),)
+                      Text("AgeApp AGEUPpaq",style: TextStyle(color: Colors.redAccent,fontSize: 17.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
-
               ],
-
             )
-
           ],
-
         )
-
-
     );
   }
-
 }
 
 //Principal
@@ -130,7 +119,6 @@ class pp extends StatelessWidget {
         platform: TargetPlatform.android
       ),
       debugShowCheckedModeBanner: false,
-
       home:AllBar(),
       onGenerateRoute: (settings) => RouteBook.generarRutas(settings,documents,books),
     );  
@@ -143,6 +131,7 @@ class  RouteBook {
   static Route<dynamic> generarRutas(RouteSettings settings, List<Documents> documentos, List<Book> books){
     final path = settings.name.split('/');
     final title = path[1];
+
     MaterialPageRoute pageroute;
     documentos.forEach((doc) => {
       
@@ -162,7 +151,7 @@ class  RouteBook {
       }
     });
     return pageroute;
-    
+
   }
 }
   

@@ -164,7 +164,11 @@ flutter:
     - img_documents/cuatro-hombres.jpg
     - img_documents/vivir-por-la-fe.jpg
     - img_documents/sufrimiento.jpg
-#la sangribooks/a papaaaaaaaaaa
+
+    - assets/fotorobin.jpg
+    - assets/fotoaracely.jpg
+    - assets/fotojuank.jpg
+
     - assets/fotojdn.jpg
     - assets/RCC.jpg
     - assets/RN.jpg
@@ -172,7 +176,7 @@ flutter:
     - assets/RO.jpg
     - assets/RS.jpg
     - assets/mapa.jpg
-    # fotos de regiones
+  # fotos de regiones
     - assets/fotovu.jpg
     - assets/costacentro2.jpg
     - assets/fondocentrooriente.jpg
@@ -183,6 +187,7 @@ flutter:
     - assets/oriente2.jpg
     - assets/fondosur.jpg
     - assets/sur2.jpg
+
     # fotos de contactos
     - assets/fotorobin.jpg
     - assets/fotojuank.jpg
@@ -199,7 +204,7 @@ flutter:
     - assets/images/circle.png
     - assets/images/edit.png
 
-#la sangria papaaaaaaaaaa
+
   fonts:
     - family:  SocialMedia
       fonts:
