@@ -2,12 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:ageapp/Contenidos/Books/data_book.dart';
 import 'package:ageapp/Contenidos/Books/rating_book.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter/services.dart';
+
+class Detail extends StatefulWidget {
+  final Book book1;
+  Detail(this.book1);
+  @override
+  _Detail createState() => _Detail(book1);
+}
 
 
-class Detail extends StatelessWidget {
+class _Detail extends State<Detail> {
   final Book book;
+  _Detail(this.book);
 
-  Detail(this.book);
+  @override
+  void initState(){
+    super.initState();
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -138,6 +154,17 @@ class Detail extends StatelessWidget {
       }
     }
 
+
+  @override
+  dispose(){
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeRight,
+      DeviceOrientation.landscapeLeft,
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
+    super.dispose();
+  }
 }
 
 

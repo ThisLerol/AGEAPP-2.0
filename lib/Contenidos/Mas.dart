@@ -20,15 +20,6 @@ class _MasState extends State<Mas>{
   }
 
   @override
-  void initState(){
-    super.initState();
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-  }
-
-  @override
   Widget build(BuildContext context){
     double tam = 10.0;
     return Scaffold(
@@ -202,18 +193,6 @@ class _MasState extends State<Mas>{
         ],
       ),
     );
-  }
-
-
-  @override
-  dispose(){
-    SystemChrome.setPreferredOrientations([
-      DeviceOrientation.landscapeRight,
-      DeviceOrientation.landscapeLeft,
-      DeviceOrientation.portraitUp,
-      DeviceOrientation.portraitDown,
-    ]);
-    super.dispose();
   }
 
 }
