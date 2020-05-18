@@ -276,7 +276,7 @@ class _HomePageState extends State<HomePage> {
         });
       } else if (!gameState.contains('empty')) {
         setState(() {
-          showWiner('Game Draw');
+          showWiner('Empate');
           markPoints('draw');
           gameEnd = true;
         });
