@@ -1,5 +1,4 @@
 import 'package:ageapp/Contenidos/Mas/Contactos.dart';
-import 'package:ageapp/Contenidos/Mas/Info.dart';
 import 'package:ageapp/Contenidos/Mas/Juego.dart';
 import 'package:ageapp/Contenidos/Mas/Regiones.dart';
 import 'package:flutter/cupertino.dart';
@@ -103,42 +102,6 @@ class _MasState extends State<Mas>{
                                   fit: BoxFit.contain,
                                   child: Text(
                                     "Contactos", style: TextStyle(
-                                    fontSize: 60.0,
-                                    fontStyle: FontStyle.italic,
-                                  ),),
-                                ),
-                              ),
-                            ]
-                        )
-
-                    ),
-                  ),
-                ),
-                InkWell(
-                  onTap: (){
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Info()));
-                  },
-                  child: Container(
-                    padding: const EdgeInsets.all(5),
-                    height: tam,
-                    decoration: MiCaja(),
-                    child: Center(
-                        child: Column(
-                            children: <Widget>[
-                              Container(
-                                width: ((MediaQuery.of(context).size.width - 40) /6),
-                                height:((MediaQuery.of(context).size.width - 40) /6),
-                                child: Icon(Icons.info, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
-                                padding: EdgeInsets.all(0.0),
-                              ),
-                              Container(
-                                height:((MediaQuery.of(context).size.width - 40) /6),
-                                padding: EdgeInsets.all(0),
-                                child: FittedBox(
-                                  fit: BoxFit.contain,
-                                  child: Text(
-                                    "Más info", style: TextStyle(
                                     fontSize: 60.0,
                                     fontStyle: FontStyle.italic,
                                   ),),
