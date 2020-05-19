@@ -94,7 +94,7 @@ class _MasState extends State<Mas>{
                                 width: ((MediaQuery.of(context).size.width - 40) /6),
                                 height:((MediaQuery.of(context).size.width - 40) /6),
                                 child: Icon(Icons.contacts, size: ((MediaQuery.of(context).size.width - 40) /6),/*color: Colors.redAccent,*/),
-                                padding: EdgeInsets.all(0.0),
+                                padding: EdgeInsets.only(),
                               ),
                               Container(
                                 height:((MediaQuery.of(context).size.width - 40) /6),
@@ -135,11 +135,11 @@ class _MasState extends State<Mas>{
                               Container(
                                 //width: ((MediaQuery.of(context).size.width - 40) /6),
                                 height:((MediaQuery.of(context).size.width - 40) /6),
-                                padding: EdgeInsets.all(0),
+                                padding: EdgeInsets.all(5),
                                 child: FittedBox(
                                   fit: BoxFit.fitWidth,
                                   child: Text(
-                                    "Juego", style: TextStyle(
+                                    "AgeGame", style: TextStyle(
                                     fontSize: 20.0,
                                     fontStyle: FontStyle.italic,
                                   ),),
