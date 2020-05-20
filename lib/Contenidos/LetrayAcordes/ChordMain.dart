@@ -77,7 +77,10 @@ class _chord extends State<chord>{
                   Text("\n"),
                   Text(letras().nombreCan(widget.musicTitle.toInt()),textAlign: TextAlign.center, style: TextStyle(color: Colors.deepOrangeAccent,fontSize: 22,decoration: TextDecoration.underline,fontStyle: FontStyle.italic, fontWeight: FontWeight.bold),),
                   Text("\n"),
-                  Text(letras().letrasand(tono, letraOacorde,widget.musicTitle.toInt()),textAlign: TextAlign.center, style: TextStyle(color: Colors.black87,fontSize: 20,decoration: TextDecoration.none,),),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(letras().letrasand(tono, letraOacorde,widget.musicTitle.toInt()),textAlign: TextAlign.center, style: TextStyle(color: Colors.black87,fontSize: 18,decoration: TextDecoration.none,),),
+                  ),
                 ],
               ),
             )
