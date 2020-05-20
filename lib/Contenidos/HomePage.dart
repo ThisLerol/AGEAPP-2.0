@@ -9,17 +9,17 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final _scafoldKey = new GlobalKey<ScaffoldState>();
 
-  AssetImage cross = AssetImage("assets/images/cross.png");
-  AssetImage circle = AssetImage("assets/images/circle.png");
+  AssetImage aspa = AssetImage("assets/images/cross.png");
+  AssetImage circulo = AssetImage("assets/images/circle.png");
   AssetImage edit = AssetImage("assets/images/edit.png");
 
-  int crossWin = 0;
-  int circleWin = 0;
+  int aspaWin = 0;
+  int circuloWin = 0;
   int draw = 0;
 
   List<String> gameState;
 
-  bool isCross = true;
+  bool isAspa = true;
   bool gameEnd = false;
 
   @override
@@ -45,11 +45,11 @@ class _HomePageState extends State<HomePage> {
       case ('empty'):
         return edit;
         break;
-      case ('cross'):
-        return cross;
+      case ('aspa'):
+        return aspa;
         break;
-      case ('circle'):
-        return circle;
+      case ('circulo'):
+        return circulo;
         break;
     }
   }
@@ -92,13 +92,6 @@ class _HomePageState extends State<HomePage> {
                 children: <Widget>[
                   Column(
                     children: <Widget>[
-                  /*Text(
-                        'Vacuna',
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold),
-                      )*/
                       Container(
                         width: 25,
                         height: 25,
@@ -106,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                         image: AssetImage("assets/images/cross.png"))),
                       SizedBox(height: 10.0),
                       Text(
-                        '${crossWin}',
+                        '${aspaWin}',
                         style: TextStyle(
                             fontSize: 32.0, fontWeight: FontWeight.bold),
                       )
@@ -114,13 +107,6 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Column(
                     children: <Widget>[
-                      /*Text(
-                        'Virus',
-                        style: TextStyle(
-                            fontSize: 20.0,
-                            color: Colors.blueAccent,
-                            fontWeight: FontWeight.bold),
-                      ), */
                       Container(
                         width: 25,
                         height: 25,
@@ -128,7 +114,7 @@ class _HomePageState extends State<HomePage> {
                         image: AssetImage("assets/images/circle.png"))),
                       SizedBox(height: 10.0),
                       Text(
-                        '${circleWin}',
+                        '${circuloWin}',
                         style: TextStyle(
                             fontSize: 32.0, fontWeight: FontWeight.bold),
                       )
@@ -195,12 +181,12 @@ class _HomePageState extends State<HomePage> {
   playGame(int index) {
     if (gameState[index] == "empty") {
       setState(() {
-        if (isCross) {
-          gameState[index] = "cross";
+        if (isAspa) {
+          gameState[index] = "aspa";
         } else {
-          gameState[index] = "circle";
+          gameState[index] = "circulo";
         }
-        isCross = !isCross;
+        isAspa = !isAspa;
         checkWin();
       });
     }
@@ -306,22 +292,22 @@ class _HomePageState extends State<HomePage> {
   newGame() {
     resetGame();
     setState(() {
-      crossWin = 0;
-      circleWin = 0;
+      aspaWin = 0;
+      circuloWin = 0;
       draw = 0;
     });
   }
 
   markPoints(String mark) {
     switch (mark) {
-      case ('cross'):
+      case ('aspa'):
         setState(() {
-          crossWin += 1;
+          aspaWin += 1;
         });  
         break;
-      case ('circle'):
+      case ('circulo'):
         setState(() {
-          circleWin += 1;
+          circuloWin += 1;
         });  
         break;
       case ('draw'):

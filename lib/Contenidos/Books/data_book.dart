@@ -163,5 +163,7 @@ final List<Book> books = [
   Book('Tiempo de misión', 'Samuel Escobar',
       'Año: 1999', 'img_documents/tiempo-de-mision.jpg', 3.5, 98,'https://drive.google.com/file/d/1VqR1tTW1VXmGsIknIRiiAf0mrS2YWlSp/view?usp=sharing',
       'Ya no cabe duda que la misión cristiana en el siglo que se aproxima tendrá un importante ingrediente latinoamericano. Por una parte, las iglesias evangélicas de la región muestran un gran dinamismo misionero. Por otra parte, la mitad de los católicos del mundo viven ahora en América Latina y sus líderes misioneros los ven como una importante reserva para el futuro. No es de extrañar entonces que la reflexión cristiana en estas tierras se haya centrado en preguntas claves acerca de la misión de la iglesia. La región ha sido algo así como un laboratorio de experiencias y reflexión y se nos ha impuesto la tarea de entender lo que ha pasado e interpretarlo. Hechos como el crecimiento espontáneo de iglesias populares, los procesos de cambio social generados por la conversión religiosa, la adopción de metodologías evangélicas por parte de misioneros católicos y el dinamismo misionero de los exilados latinoamericanos en otras partes del mundo nos obligan a observar y tratar de interpretar.'),
-  
+    Book('boletines GAIA', 'GAIA',
+      'Año: 2018', 'img_documents/gaia.jpg', 3.5, 13,'https://mega.nz/folder/vVJCACZT#EKzNTsrN_BpddBHa9nYBpA',
+      'Es la serie de boletines del Programa de Ecología y Cuidado de la Casa Común. Nació para ser un boletín informativo y educativo sobre las actividades que realiza el Programa y aportes de sus participantes que se publicaba mes a mes. Pero ahora tendrán 4 grandes temáticas, en las que variarán las publicaciones: Articulos, Estudios Bíblicos, Formación y GAIA Especial.'),
 ];

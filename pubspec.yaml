@@ -14,7 +14,7 @@ description: Aplicacion de AGEUP
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
+  sdk: ">=2.5.0 <3.0.0"
 
 dependencies:
   flutter:
@@ -165,7 +165,7 @@ flutter:
     - img_documents/vivir-por-la-fe.jpg
     - img_documents/sufrimiento.jpg
     - img_documents/contagiar-una-vision-misionera.jpg
-
+    - img_documents/gaia.jpg
 
     - assets/fotorobin.jpg
     - assets/fotoaracely.jpg
