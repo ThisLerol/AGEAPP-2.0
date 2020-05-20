@@ -1,10 +1,8 @@
 import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:ageapp/Contenidos/Letra y Acordes/ChordMain.dart';
-import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
-import 'package:ageapp/Contenidos/Letra y Acordes/Buscar.dart';
-import 'package:flutter/services.dart';
+import 'package:ageapp/Contenidos/LetrayAcordes/ChordMain.dart';
+import 'package:ageapp/Contenidos/LetrayAcordes/Canciones/MusicaClass.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class Musica extends StatefulWidget{
@@ -17,30 +15,21 @@ class Musica extends StatefulWidget{
 
 class _Musica extends State<Musica>{
   List<String> test, sample, _dat1;
-
   String texto = " ";
   MusicaClass musicaData = new MusicaClass();
-
   var controller = 0;
 
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return Scaffold(
-
       // color: Colors.red[50],
-
       body:
-
       ListView(
-
         children:
         //ListaCanciones(),
         CancionesBuscadas(texto),
       ),
-
-
-
     );
   }
 
@@ -49,27 +38,15 @@ class _Musica extends State<Musica>{
     var nombresIndex = <int>[];
 
     int cont = 0;
-    print("ancho");
-    print(musicaData.getnombreListancho());
     for( var i = 0 ; i <= musicaData.getnombreListancho()-1; i++ ) {
       if(musicaData.getnombre(i).toLowerCase().contains(text.toLowerCase())){
         nombresBus.add(musicaData.getnombre(i));
         nombresIndex.add(i);
         cont++;
-        print("cont");
-        print(cont);
-
       }
-
     }
-
     var arr = new List<Widget>(cont+1);
-    print("nombresBus");
-    print(nombresBus);
-    print(nombresBus.length);
-    print("nombresIndex");
-    print(nombresIndex);
-    print(nombresIndex.length);
+
     Color InterCalar(int i){
       if(i%2==0){
         return Colors.white;
@@ -77,17 +54,8 @@ class _Musica extends State<Musica>{
         return Colors.red[50];
       }
     }
-    print("cont");
-    print(cont);
-    print("arr lenght");
-    print(arr.length);
     var a = 0;
-
     for( var i = 1 ; i <= cont; i++ ){
-      print('var a');
-      print(a);
-      print(nombresIndex.length);
-
 
       arr[i]= Container(
         decoration: BoxDecoration(
@@ -97,7 +65,6 @@ class _Musica extends State<Musica>{
             BoxShadow(color: Colors.red[50], spreadRadius: 0),
           ],
         ),
-
         child: Wrap(
             alignment: WrapAlignment.spaceBetween,
             crossAxisAlignment: WrapCrossAlignment.center,
@@ -119,14 +86,14 @@ class _Musica extends State<Musica>{
                               onTap: () {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => chord(musicTitle: i)),
+                                  MaterialPageRoute(builder: (context) => chord(musicTitle: nombresIndex[i-1])),
                                 );},
                               child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children:<Widget>[
                                     //Text(musicaData.getLinksDrive(nombresIndex[a]).toString()),
                                     Container(width: MediaQuery.of(context).size.width/1.5,child: Text("$i. "+nombresBus[i-1].toString(),maxLines: 1,textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 20, ),),),
-                                    Text("Autor Desconocido", textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
+                                    Text(musicaData.getAutores(nombresIndex[i-1]), textAlign: TextAlign.start,style: TextStyle(fontWeight: FontWeight.normal, fontSize: 15, color: Colors.red[300]),)
                                   ]
                               ),
                             ),
@@ -161,7 +128,6 @@ class _Musica extends State<Musica>{
       );
       a++;
     }
-
     arr[0]=Container(
       width: 300,
       padding: EdgeInsets.symmetric(horizontal: 20),
@@ -174,7 +140,7 @@ class _Musica extends State<Musica>{
               topLeft: Radius.circular(15.0),
               topRight: Radius.circular(15.0))),
       child: TextField(
-        style: new TextStyle(color: Colors.white),
+        style: new TextStyle(color: Colors.black54),
         decoration: InputDecoration(
           contentPadding: EdgeInsets.only(top: 15.0),
           border: InputBorder.none,
@@ -192,8 +158,6 @@ class _Musica extends State<Musica>{
         },
       ),
     );
-
-
     return arr;
   }
 

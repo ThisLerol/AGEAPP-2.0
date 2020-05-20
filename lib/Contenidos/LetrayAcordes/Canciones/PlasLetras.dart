@@ -1,5 +1,4 @@
-
-import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
+import 'package:ageapp/Contenidos/LetrayAcordes/Canciones/MusicaClass.dart';
 
 class letras{
   MusicaClass musicaData = MusicaClass();
@@ -8,7 +7,7 @@ class letras{
   }
 
   String letrasand(int tono,int ind, int i){
-    tono+= 10;
+    tono+= 0;
     String can;
     if(ind==1){
       can = musicaData.getletras(i);

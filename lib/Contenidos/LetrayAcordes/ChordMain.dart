@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/PlasLetras.dart';
-import 'package:ageapp/Contenidos/Letra y Acordes/Canciones/MusicaClass.dart';
+import 'package:ageapp/Contenidos/LetrayAcordes/Canciones/PlasLetras.dart';
+
 
 class chord extends StatefulWidget{
   chord({Key key, this.musicTitle}) : super(key: key);
@@ -94,14 +94,16 @@ class _chord extends State<chord>{
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: <Widget>[
+              //Booton menos
               RawMaterialButton(
                 onPressed: () {
                   setState(() {
-                    if(tono <= 0){
+                    if(tono == 0){
                       tono = 12;
                     }else{
                       tono--;
                     }
+
                   });
                 },
                 elevation: 2.0,
@@ -116,10 +118,12 @@ class _chord extends State<chord>{
                   side: BorderSide(color: Colors.red)
                 ),
               ),
+
+              //Botton maas
               RawMaterialButton(
                 onPressed: () {
                   setState(() {
-                    if(tono >= 12){
+                    if(tono == 12){
                       tono = 0;
                     }else{
                       tono++;
