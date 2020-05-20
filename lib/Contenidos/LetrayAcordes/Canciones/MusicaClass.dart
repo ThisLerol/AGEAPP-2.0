@@ -119,7 +119,7 @@ class MusicaClass {
      autores[24]= "Heber Romero";
    }
    void LinksDrive(){
-     drive[0]= '-';
+     drive[0]= 'https://drive.google.com/open?id=1a9Sq-3P2MWYtaK2NOGP_LVrSQ71YNaLu';
      drive[1]= 'https://drive.google.com/open?id=1GBI_g8MRI-T9VxAa4N8ktwwo8SGI64Zt';
      drive[2]= 'https://drive.google.com/open?id=1LDYAOFF5An8Y02swILxNYCDFga3aiyHR';
      drive[3]= 'https://drive.google.com/open?id=1Rhpwuw6YWVGMZFA4ksocOSpUJS4T4sys';
@@ -139,7 +139,7 @@ class MusicaClass {
      drive[17]= 'https://drive.google.com/open?id=1Q1dZbbgXivLdu1wbtZPjqvEga5UnwwW6';
      drive[18]= 'https://drive.google.com/open?id=1RBcOaY3PMzAhU_URIknc9Q6UVp_7I5nr';
      drive[19]= '-';
-     drive[20]= '-';
+     drive[20]= 'https://drive.google.com/open?id=1nMyPRuB6el6ix1H9Yyg7IfsWA-8tcJFY';
      drive[21]= 'https://drive.google.com/open?id=1DRWlr99L8Sjpn3ac2ZHNXaPF6M6Hd0BC';
      drive[22]= 'https://drive.google.com/open?id=1Xvo3wAheNq9rAyFbtgQuI8yFjCap36Wj';
      drive[23]= 'https://drive.google.com/open?id=1XueO49mSLphYa6FvOT3jj40NmPS1DS0S';
