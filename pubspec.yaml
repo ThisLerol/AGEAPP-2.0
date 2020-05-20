@@ -164,6 +164,8 @@ flutter:
     - img_documents/cuatro-hombres.jpg
     - img_documents/vivir-por-la-fe.jpg
     - img_documents/sufrimiento.jpg
+    - img_documents/contagiar-una-vision-misionera.jpg
+    - img_documents/gaia.jpg
 
     - assets/fotorobin.jpg
     - assets/fotoaracely.jpg
@@ -173,7 +175,7 @@ flutter:
     - assets/RCC.jpg
     - assets/RN.jpg
     - assets/RCO.jpg
-    - assets/RO.jpg
+    - assets/RO.png
     - assets/RS.jpg
     - assets/mapa.jpg
   # fotos de regiones

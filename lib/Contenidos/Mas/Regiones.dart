@@ -167,7 +167,7 @@ class _Regiones extends StatelessWidget{
                 child: ClipRRect(
                   borderRadius: BorderRadius.all(Radius.circular(38.0)),
                   child: Image(
-                    image: AssetImage('assets/RO.jpg'),
+                    image: AssetImage('assets/RO.png'),
                     fit: BoxFit.cover,
                   ),
                 ),
