@@ -6,8 +6,6 @@ import 'package:ageapp/Contenidos/Books/detail_book.dart';
 import 'package:ageapp/Contenidos/Materials/data_material.dart';
 import 'package:ageapp/Contenidos/Materials/detail_material.dart';
 
-
-
 void main(){
   runApp(new MaterialApp(
     home: SplashScrean(),
@@ -15,17 +13,12 @@ void main(){
   ),
   
   );
-  
 }
-
 class SplashScrean extends StatefulWidget{
   @override
   _SplashScrean createState() => _SplashScrean();
 
 }
-
-
-
 class _SplashScrean extends State<SplashScrean>{
 
   Future<bool> _CheckSplash() async{
@@ -95,7 +88,7 @@ class _SplashScrean extends State<SplashScrean>{
                     children: <Widget>[
                       CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Colors.red),),
                       Padding(padding: EdgeInsets.only(top: 20.0),),
-                      Text("AgeApp AGEUPpaq",style: TextStyle(color: Colors.redAccent,fontSize: 17.0,fontWeight: FontWeight.bold),)
+                      Text("AgeAppqha paypam AGEUPpam",style: TextStyle(color: Colors.redAccent,fontSize: 17.0,fontWeight: FontWeight.bold),)
                     ],
                   ),
                 )
@@ -154,9 +147,6 @@ class  RouteBook {
     return pageroute;
 
   }
-
-
-
 }
   
 
