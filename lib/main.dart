@@ -132,6 +132,7 @@ class  RouteBook {
     final path = settings.name.split('/');
     final title = path[1];
 
+
     MaterialPageRoute pageroute;
     documentos.forEach((doc) => {
       
@@ -153,6 +154,9 @@ class  RouteBook {
     return pageroute;
 
   }
+
+
+
 }
   
 
