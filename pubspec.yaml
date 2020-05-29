@@ -98,10 +98,7 @@ flutter:
     - img_documents/vida-en-comunidad.jpg
     - img_documents/etica.jpg
     - img_documents/lectio-divina.jpg
-    - img_documents/existe-dios.jpg
-    - img_documents/cristianismo.jpg
     - img_documents/el-principio-de-las-cosas.jpg
-    - img_documents/la-mujer-en-el-cristianismo.jpg
     - img_documents/dinero-y-poder.jpg
     - img_documents/la-edad-tecnica.jpg
     - img_documents/cristianismo-y-ciencia.jpg
@@ -129,7 +126,6 @@ flutter:
     - img_documents/pentateuco.jpg
     - img_documents/el-pastor-como-consejero.jpg
     - img_documents/se-hizo-hombre.jpg
-    - img_documents/todos-somos-teologos.jpg
     - img_documents/que-es-mision-integral.jpg
     - img_documents/bases-biblicas.jpg
     - img_documents/el-evangelio-hoy.jpg
@@ -166,6 +162,17 @@ flutter:
     - img_documents/sufrimiento.jpg
     - img_documents/comentario-pagola.jpg
     - img_documents/gaia.jpg
+    - img_documents/el-estudiante-evangelico.jpg
+    - img_documents/la-aventura-de-estudiar-la-biblia.jpg
+    - img_documents/los-viejos-leones.jpg
+    - img_documents/pastoral-misionera.jpg
+    - img_documents/vidas-militantes-robin.jpg
+    - img_documents/jesus-la-respuesta.jpg
+    - img_documents/jesus-y-las-mujeres.jpg
+    - img_documents/estatuto.jpg
+    - img_documents/reglamento-estatutario.jpg
+    - img_documents/reglas-parlamentarias.jpg
+    - img_documents/profol.jpg
 
     - assets/fotorobin.jpg
     - assets/fotoaracely.jpg
@@ -201,6 +208,13 @@ flutter:
     - assets/fotomisael.jpg
     - assets/fotoaracely.jpg
     - assets/fotojhoss.jpg
+    - assets/fotoalbert.jpg
+    - assets/fotocarolina.jpg
+    - assets/fotodavid.jpg
+    - assets/fotokaren.jpg
+    - assets/fotokevin.jpg
+    - assets/fotorocio.jpg
+    - assets/fotoyelina.jpg
     # imagenes para el juego
     - assets/images/cross.png
     - assets/images/circle.png

@@ -128,32 +128,6 @@ class Contactos extends StatelessWidget{
                     ninsta:"misael.cbu",
                     posicion: 8),
               ),
-              InkWell(
-                onTap: (){
-                },
-                child: Contacto(
-                    imagen:'assets/fotoaracely.jpg',
-                    nombre: "Aracely",
-                    cargo: "Obrera Regional",
-                    facebook: 'https://www.facebook.com/altardelcielo777',
-                    instagram: '',
-                    nface:"Aracely Ixoye",
-                    ninsta:"",
-                    posicion: 9),
-              ),
-              InkWell(
-                onTap: (){
-                },
-                child: Contacto(
-                    imagen:'assets/fotojhoss.jpg',
-                    nombre: "Jhosselyn Rejas",
-                    cargo: "Obrera Regional",
-                    facebook: 'https://www.facebook.com/jhosselyn.rejascurasi',
-                    instagram: 'https://www.instagram.com/jhoss.rejascurasi/?hl=es-la',
-                    nface:"Jhosselyn Rejas Curasi",
-                    ninsta:"jhoss.rejascurasi",
-                    posicion: 10),
-              ),
             ]
             ),
             ),
