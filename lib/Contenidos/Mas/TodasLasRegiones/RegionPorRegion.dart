@@ -21,9 +21,15 @@ class RegionPorRegion extends StatelessWidget {
             ),
           ),
           Cuerpo(numero, context),
-
-
-
+          SliverFixedExtentList(
+            itemExtent:180,
+            delegate: SliverChildListDelegate([
+              Container(
+                child: _Obreros(numeroderegion: numero),
+              ),
+            ],
+          ),
+          ),
         ],
       ),
     );
@@ -79,6 +85,8 @@ class RegionPorRegion extends StatelessWidget {
     String descripcion;
     String instagram;
     String facebook;
+    String nomFacebook;
+    String nomInstagram;
 
     switch(num) {
       case 1: {
@@ -86,6 +94,8 @@ class RegionPorRegion extends StatelessWidget {
         imagen = 'assets/costacentro2.jpg';
         instagram = 'https://www.instagram.com/costa.centro/?hl=es-la';
         facebook = 'https://www.facebook.com/regioncostacentro.ageup';
+        nomFacebook= "Region Costa Centro Ageup";
+        nomInstagram= "costa.centro";
       }
       break;
 
@@ -94,22 +104,28 @@ class RegionPorRegion extends StatelessWidget {
         imagen = 'assets/norte2.jpg';
         instagram = 'https://www.instagram.com/regionnorte.ageup/?hl=es-la';
         facebook = 'https://www.facebook.com/ageup.solido.norte';
+        nomFacebook= "AGEUP Región NORTE";
+        nomInstagram= "regionnorte.ageup";
       }
       break;
 
       case 3: {
         titulo = "Región Centro Oriente";
         imagen = 'assets/centrooriente2.jpg';
-        instagram = '';
+        instagram = 'Region Centro Oriente-AGEUP';
         facebook = 'https://www.facebook.com/Region-Centro-Oriente-AGEUP-2295426874045005';
+        nomFacebook= "Region Centro Oriente-AGEUP";
+        nomInstagram= "regioncentrooriente";
       }
       break;
 
       case 4: {
         titulo = "Región Oriente";
         imagen = 'assets/oriente2.jpg';
-        instagram = '';
+        instagram = 'Región Oriente Ageup';
         facebook = 'https://www.facebook.com/profile.php?id=100009909468823';
+        nomFacebook= "Region Oriente AGEUP";
+        nomInstagram= "";
       }
       break;
 
@@ -118,68 +134,50 @@ class RegionPorRegion extends StatelessWidget {
         imagen = 'assets/sur2.jpg';
         instagram = 'https://www.instagram.com/regionsur/?hl=es-la';
         facebook = 'https://www.facebook.com/Region-Sur-AGEUP-1694473440831476';
+        nomFacebook= "Region Sur AGEUP";
+        nomInstagram= "regionsur";
       }
       break;
     }
     return SliverFixedExtentList(
-      itemExtent: 200,
+      itemExtent: 70,
       delegate: SliverChildListDelegate([
         Container(
           child: Row(
             children: <Widget>[
-              Container(
-                width: MediaQuery.of(context).size.width/2,
-                //color: Colors.grey[300],
-                 child: Column(
-                   children: <Widget>[
-                     Container(
-                       //color: Colors.orange,
-                       child: Column(
-                         children: <Widget>[
-                           InkWell(
-                             onTap: () => launch(facebook),
-                             child: Container(
-                                 padding: EdgeInsets.only(top:15.0,bottom: 5.0,left: 10.0),
-                                 child: Row(
-                                   children: <Widget>[
-                                     Icon(SocialMedia.facebook_squared,size: 30,color: Colors.indigo),
-                                     Text("facebook")
+              InkWell(
+                onTap: () => launch(facebook),
+                child: Container(
+                    width: MediaQuery.of(context).size.width/2,
+                    padding: EdgeInsets.only(top:15.0,bottom: 5.0,left: 10.0),
+                    child: Row(
+                      children: <Widget>[
+                        Icon(SocialMedia.facebook_squared,size: 30,color: Colors.indigo),
+                        Container(
+                            padding: EdgeInsets.only(left: 10.0),
+                            width: MediaQuery.of(context).size.width/3,
+                            child: Text(nomFacebook, maxLines: 1,style: TextStyle(fontSize: 13),))
                                    ],
                                  )
                              ),
                            ),
-                           InkWell(
-                             onTap: () => launch(instagram),
-                             child: Container(
-                               padding: EdgeInsets.only(top:5.0,bottom: 5.0,left: 10.0),
-                               child: Row(
-                                 children: <Widget>[
-                                   Icon(SocialMedia.instagram,size: 30, color: Colors.pink,),
-                                   Text("instagram")
+              InkWell(
+                onTap: () => launch(instagram),
+                child: Container(
+
+                  width: MediaQuery.of(context).size.width/2,
+                  padding: EdgeInsets.only(top:15.0,bottom: 5.0,left: 10.0),
+                  child: Row(
+                    children: <Widget>[
+                      Icon(SocialMedia.instagram,size: 30, color: Colors.pink,),
+                      Container(
+                          padding: EdgeInsets.only(left: 10.0),
+                          width: MediaQuery.of(context).size.width/3,
+                          child: Text(nomInstagram, maxLines: 1,style: TextStyle(fontSize: 13.0),))
                                  ],
                                ),
                              ),
                            ),
-                         ],
-                       ),
-                     ),
-                   ],
-                 )
-              ),
-              Container(
-                width:MediaQuery.of(context).size.width/2,
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Container(padding: EdgeInsets.only(top: 15.0),
-                         width: 120,
-                          child: ClipOval(
-                             child: Image(
-                              image: AssetImage(imagen),
-                              ),
-                          ),
-                  ),
-                ),
-              ),
             ],
           ),
         ),
@@ -254,6 +252,190 @@ class RegionPorRegion extends StatelessWidget {
       ]),
     );
   }
+
+}
+
+class _Obreros extends StatelessWidget{
+  final int numeroderegion;
+  const _Obreros({Key key, this.numeroderegion}): super(key:key);
+  Widget build (BuildContext context){
+    return ListView(
+      scrollDirection: Axis.horizontal,
+      children: CantidadObreros(numeroderegion, Contacta(context)),
+    );
+  }
+
+  Container Contacta(BuildContext context){
+
+    return Container(
+      padding: EdgeInsets.all(10.0),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 10,),
+          SizedBox(
+            height: 140,
+            child: Container(
+              decoration: BoxDecoration(
+                  color: Colors.red[200],
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(10.0),
+                      topRight: Radius.circular(10.0),
+                      bottomLeft: Radius.circular(10.0),
+                      bottomRight: Radius.circular(10.0)
+                  )
+              ),
+              width: MediaQuery.of(context).size.width/8,
+              child: Align(
+                alignment: Alignment.center,
+                child: FittedBox(
+                  fit: BoxFit.fill,
+                    child: Text("C\no\nn\nt\na\nc\nt\no\ns", style: TextStyle(fontSize: 12.0),textAlign: TextAlign.center ,)),
+              ),
+            ),
+          ),
+          SizedBox(height: 10,),
+        ],
+      ),
+    );
+  }
+
+  List<Widget> CantidadObreros(int num, Container Contacta){
+    int num2;
+    var arr = new List<Widget>();
+    arr.add(Contacta);
+    switch(num) {
+      case 1: {
+        num2 =2;
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotojhoss.jpg',
+          Nombre: "Jhosselyn Rejas",
+          facebook: 'https://www.facebook.com/jhosselyn.rejascurasi',
+          instagram: 'https://www.instagram.com/jhoss.rejascurasi/?hl=es-la',));
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotorocio.jpg',
+          Nombre: "Rocío Salón",
+          facebook: 'https://www.facebook.com/rocio.salonhuaman',
+          instagram: '',));
+      }
+      break;
+      case 2: {
+        num2 = 3;
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotokaren.jpg',
+          Nombre: "Karen Moreno",
+          facebook: 'https://www.facebook.com/lokilinda.moreno',
+          instagram: 'https://www.instagram.com/losviajesdekalinda/?hl=es-la',));
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotoalbert.jpg',
+          Nombre: "Albert Den",
+          facebook: 'https://www.facebook.com/albert.denoudsten',
+          instagram: 'https://www.instagram.com/albertdenoudsten/?hl=es-la',));
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotokevin.jpg',
+          Nombre: "Kevin Salazar",
+          facebook: 'https://www.facebook.com/kevinharolds',
+          instagram: 'https://www.instagram.com/kevinse.15/?hl=es-la',));
+      }
+      break;
+      case 3: {
+        num2 = 2;
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotoaracely.jpg',
+          Nombre: "Arcely Ñavincapa",
+          facebook: 'https://www.facebook.com/altardelcielo777',
+          instagram: 'https://www.instagram.com/altardelcielo7777/?hl=es-la',));
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotoyelina.jpg',
+          Nombre: "Yelina Oscanoa",
+          facebook: 'https://www.facebook.com/yelina.oscanoatinoco',
+          instagram: 'https://www.instagram.com/yelytinoco/?hl=es-la',));
+      }
+      break;
+      case 4: {
+        num2 = 1;
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotorobin.jpg',
+          Nombre: "Robin Rodriguez",
+          facebook: 'https://www.facebook.com/robindavid.rodriguezpariona',
+          instagram: 'https://www.instagram.com/robinageup/?hl=es-la',));
+      }
+      break;
+      case 5: {
+        num2 = 2;
+        arr.add(_ObreroRegion(
+          foto: 'assets/fotocarolina.jpg',
+          Nombre: "Carolina Lovatón",
+          facebook: 'https://www.facebook.com/carolina.lovaton.3',
+          instagram: '',));
+      }
+      break;
+    }
+
+    return arr;
+  }
+}
+
+class _ObreroRegion extends StatelessWidget{
+final String foto;
+final String Nombre;
+final String facebook;
+final String instagram;
+const _ObreroRegion({Key key, this.foto, this.Nombre, this.instagram,this.facebook}): super(key:key);
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: MediaQuery.of(context).size.width/3,
+      child: Column(
+        children: <Widget>[
+          Container(
+            padding: EdgeInsets.all(8),
+            child: ClipRRect(
+              borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                child: Image(image: AssetImage(foto) )),
+          ),
+          Container(
+            width:MediaQuery.of(context).size.width/3.5,
+            height: 15,
+            //color: Colors.blueGrey,
+            child: FittedBox(
+              fit: BoxFit.contain,
+                child: Text(this.Nombre,),
+            ),
+          ),
+          Container(
+            //color: Colors.redAccent,
+            child: Row(
+              children: <Widget>[
+                Container(//color: Colors.deepOrangeAccent,
+                    child: SizedBox(width: MediaQuery.of(context).size.width/15 ,
+                    height: 20,)),
+                InkWell(
+                  onTap: () => launch(facebook),
+                  child: Container(
+                    padding: EdgeInsets.only(left: 0,right: 0.0,top: 5.0),
+                      child: Icon(SocialMedia.facebook_squared,size: MediaQuery.of(context).size.width/15,color: Colors.indigo),
+                  ),
+                ),
+                Container(//color: Colors.deepOrangeAccent,
+                    child: SizedBox(width: MediaQuery.of(context).size.width/15 ,
+                      height: 20,)),
+                InkWell(
+                  onTap: () => launch(instagram),
+                  child: Container(
+                    padding: EdgeInsets.only(top: 5.0),
+                    child: Icon(SocialMedia.instagram,size: MediaQuery.of(context).size.width/15, color: Colors.pink,),
+                  ),
+                ),
+                Container(//color: Colors.deepOrangeAccent,
+                    child: SizedBox(width: MediaQuery.of(context).size.width/15 ,
+                      height: 20,)),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
 
 class _descripcion extends StatelessWidget{
@@ -265,7 +447,7 @@ class _descripcion extends StatelessWidget{
     String descripcion;
     switch(num) {
       case 1: {
-        descripcion ="La Region Costa Centro no se encarga solo de comunicarse con las diferentes CBU's de Lima e Ica. La RCC tambien busca que se creen lazos entre los ageupinos, busca que podamos aprender y concer más acerca de nuestra fe. Lo que la caracteriza es que a pesar de la distancia, diversas bases pueden disfrutar juntas en espacios como un viernes universitario.";
+        descripcion ="La Región Costa Centro no se encarga solo de comunicarse con las diferentes CBU's de Lima e Ica. La RCC tambien busca que se creen lazos entre los ageupinos, busca que podamos aprender y concer más acerca de nuestra fe. Lo que la caracteriza es que a pesar de la distancia, diversas bases pueden disfrutar juntas en espacios como un viernes universitario.";
       }
       break;
 

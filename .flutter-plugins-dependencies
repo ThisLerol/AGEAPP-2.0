@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"info":"This is a generated file; do not edit or check into version control.","plugins":{"ios":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-4.2.0+3\\\\","dependencies":[]}],"android":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-4.2.0+3\\\\","dependencies":[]}],"macos":[],"linux":[],"windows":[],"web":[]},"dependencyGraph":[{"name":"url_launcher","dependencies":[]}],"date_created":"2020-05-28 22:43:16.606020","version":"1.17.1"}
+=======
+{"_info":"// This is a generated file; do not edit or check into version control.","dependencyGraph":[{"name":"url_launcher","dependencies":[]}]}
+>>>>>>> 0aa7ba98240f772888b6ed734e638dbb100dbe4e
