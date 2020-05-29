@@ -33,7 +33,6 @@ class _chord extends State<chord>{
               Align(
                 child: modAcordesView(),
               ),
-
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: RaisedButton(
@@ -54,7 +53,6 @@ class _chord extends State<chord>{
                         acordesview= false;
                         letraOacorde=1;
                       }}
-
                     });
                   },
                   child: Text(
@@ -88,11 +86,9 @@ class _chord extends State<chord>{
       )
     );
   }
-
   Widget modAcordesView(){
     if(acordesview){
       return
-
         Align(
           child: Row(
             mainAxisAlignment: MainAxisAlignment.end,
@@ -111,17 +107,18 @@ class _chord extends State<chord>{
                 },
                 elevation: 2.0,
                 fillColor: Colors.white,
-                child: Icon(
-                  Icons.remove,
-                  size: 20.0,
-                  color: Colors.red,
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.remove, size: 13.0, color: Colors.red,),
+                    Icon(Icons.music_note,size: 20.0,color: Colors.red,),
+                  ],
                 ),
                 padding: EdgeInsets.all(0.0),
                 shape: CircleBorder(
                   side: BorderSide(color: Colors.red)
                 ),
               ),
-
+             Text("Tono"),
               //Botton maas
               RawMaterialButton(
                 onPressed: () {
@@ -131,15 +128,15 @@ class _chord extends State<chord>{
                     }else{
                       tono++;
                     }
-
                   });
                 },
                 elevation: 2.0,
                 fillColor: Colors.white,
-                child: Icon(
-                  Icons.add,
-                  size: 20.0,
-                  color: Colors.red,
+                child: Row(
+                  children: <Widget>[
+                    Icon(Icons.add, size: 13.0, color: Colors.red,),
+                    Icon(Icons.music_note,size: 20.0,color: Colors.red,),
+                  ],
                 ),
                 padding: EdgeInsets.all(0.0),
                 shape: CircleBorder(
