@@ -74,7 +74,7 @@ class _AllBar extends State<AllBar> with SingleTickerProviderStateMixin{
             Container(child: new Tab(icon:  new Icon(Icons.info_outline),),width: MediaQuery.of(context).size.width/6,),
             Container(child: new Tab(icon: new FittedBox(fit: BoxFit.fitWidth, child: new Text("MÚSICA", style: TextStyle(fontSize: 16),))),width: MediaQuery.of(context).size.width/6,),
             Container(child: new Tab(icon: new FittedBox(fit: BoxFit.fitWidth, child: new Text("LIBROS", style: TextStyle(fontSize: 16),))),width: MediaQuery.of(context).size.width/6,),
-              Container(child: new Tab(icon: new FittedBox(fit: BoxFit.fitWidth, child: new Text("MATERIALES", style: TextStyle(fontSize: 16),))),width: MediaQuery.of(context).size.width/4,),
+            Container(child: new Tab(icon: new FittedBox(fit: BoxFit.fitWidth, child: new Text("MATERIALES", style: TextStyle(fontSize: 16),))),width: MediaQuery.of(context).size.width/4,),
             Container(child: new Tab(icon: new Icon(Icons.add,size: 30)),width: MediaQuery.of(context).size.width/6,),
               //PONES MAS Y PONES EL ANCHO
               ]
