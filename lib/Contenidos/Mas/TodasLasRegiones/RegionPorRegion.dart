@@ -8,27 +8,31 @@ class RegionPorRegion extends StatelessWidget {
   @override
   Widget build(BuildContext context){
     return new Scaffold(
-      body:CustomScrollView(
-        primary: false,
-        slivers: <Widget>[
-          FotoRegion(numero),
-          Decripcion(numero, context),
-          SliverFixedExtentList(
-            itemExtent: 220,
-            delegate: SliverChildListDelegate([
-              _descripcion(numeroderegion: numero,),
-            ],
-            ),
-          ),
-          Cuerpo(numero, context),
-          SliverFixedExtentList(
-            itemExtent:180,
-            delegate: SliverChildListDelegate([
-              Container(
-                child: _Obreros(numeroderegion: numero),
+      body:Column(
+        children: <Widget>[
+          CustomScrollView(
+            primary: false,
+            slivers: <Widget>[
+              FotoRegion(numero),
+              Decripcion(numero, context),
+              SliverFixedExtentList(
+                itemExtent: 220,
+                delegate: SliverChildListDelegate([
+                  _descripcion(numeroderegion: numero,),
+                ],
+                ),
+              ),
+              Cuerpo(numero, context),
+              SliverFixedExtentList(
+                itemExtent:MediaQuery.of(context).size.width/(4/3),
+                delegate: SliverChildListDelegate([
+                  Container(
+                    child: _Obreros(numeroderegion: numero),
+                  ),
+                ],
+              ),
               ),
             ],
-          ),
           ),
         ],
       ),
@@ -385,6 +389,7 @@ const _ObreroRegion({Key key, this.foto, this.Nombre, this.instagram,this.facebo
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width/3,
+      height: MediaQuery.of(context).size.width/(4/3),
       child: Column(
         children: <Widget>[
           Container(

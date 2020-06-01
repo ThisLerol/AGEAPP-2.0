@@ -1,1 +1,9 @@
+<<<<<<< HEAD
 {"info":"This is a generated file; do not edit or check into version control.","plugins":{"ios":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-5.4.10\\\\","dependencies":[]}],"android":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-5.4.10\\\\","dependencies":[]}],"macos":[{"name":"url_launcher_macos","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher_macos-0.0.1+7\\\\","dependencies":[]}],"linux":[],"windows":[],"web":[{"name":"url_launcher_web","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher_web-0.1.1+6\\\\","dependencies":[]}]},"dependencyGraph":[{"name":"url_launcher","dependencies":["url_launcher_web","url_launcher_macos"]},{"name":"url_launcher_macos","dependencies":[]},{"name":"url_launcher_web","dependencies":[]}],"date_created":"2020-05-29 00:13:51.087524","version":"1.17.1"}
+=======
+<<<<<<< HEAD
+{"_info":"// This is a generated file; do not edit or check into version control.","dependencyGraph":[{"name":"url_launcher","dependencies":["url_launcher_web","url_launcher_macos"]},{"name":"url_launcher_macos","dependencies":[]},{"name":"url_launcher_web","dependencies":[]}]}
+=======
+{"info":"This is a generated file; do not edit or check into version control.","plugins":{"ios":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-4.2.0+3\\\\","dependencies":[]}],"android":[{"name":"url_launcher","path":"C:\\\\flutter\\\\.pub-cache\\\\hosted\\\\pub.dartlang.org\\\\url_launcher-4.2.0+3\\\\","dependencies":[]}],"macos":[],"linux":[],"windows":[],"web":[]},"dependencyGraph":[{"name":"url_launcher","dependencies":[]}],"date_created":"2020-05-28 23:19:53.664398","version":"1.17.1"}
+>>>>>>> f80fa4b1f58d06fa93b698dc3d43e7dd7401e28c
+>>>>>>> 5128b3c2dde1b4f96c2feeff2f6fcf032b1391d7
