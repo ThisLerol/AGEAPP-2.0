@@ -22,7 +22,7 @@ class RegionPorRegion extends StatelessWidget {
           ),
           Cuerpo(numero, context),
           SliverFixedExtentList(
-            itemExtent:180,
+            itemExtent:MediaQuery.of(context).size.width/2,
             delegate: SliverChildListDelegate([
               Container(
                 child: _Obreros(numeroderegion: numero),
