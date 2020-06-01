@@ -380,7 +380,7 @@ const _ObreroRegion({Key key, this.foto, this.Nombre, this.instagram,this.facebo
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width/3,
-      height: MediaQuery.of(context).size.width/(4/3),
+      height: MediaQuery.of(context).size.width/(2),
       child: Column(
         children: <Widget>[
           Container(
